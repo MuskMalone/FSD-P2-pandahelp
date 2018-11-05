@@ -11,6 +11,7 @@ namespace FSD_P2_pandahelp.App_Code
         public string desc { get; set; }
         public string module { get; set; }
         public string paymentMode { get; set; }
+        public bool solved { get; set; }
         public List<Student> studentList { get; set; }
         
     }
