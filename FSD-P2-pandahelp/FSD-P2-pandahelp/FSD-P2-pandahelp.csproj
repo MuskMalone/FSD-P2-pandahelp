@@ -79,8 +79,7 @@
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="Listing_Pages\Listing.aspx" />
-    <Content Include="Listing_Pages\ViewListings.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Menu.ascx" />
     <Content Include="Web.config" />
@@ -92,19 +91,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Listing_Pages\Listing.aspx.cs">
-      <DependentUpon>Listing.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Listing_Pages\Listing.aspx.designer.cs">
-      <DependentUpon>Listing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Listing_Pages\ViewListings.aspx.cs">
-      <DependentUpon>ViewListings.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Listing_Pages\ViewListings.aspx.designer.cs">
-      <DependentUpon>ViewListings.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
@@ -152,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Pages\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
