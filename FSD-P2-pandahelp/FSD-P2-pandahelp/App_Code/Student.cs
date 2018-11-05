@@ -14,5 +14,18 @@ namespace FSD_P2_pandahelp.App_Code
         public string photo { get; set; }
         public string password { get; set; }
         public string course { get; set; }
+
+        public void SentList()
+        {
+
+        }
+        public void AccpetList()
+        {
+
+        }
+        public void DeclineList()
+        {
+
+        }
     }
 }
