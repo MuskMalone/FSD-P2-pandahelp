@@ -74,7 +74,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Listing_Pages\Listing.aspx" />
+    <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
@@ -123,12 +123,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Listing_Pages\Listing.aspx.cs">
-      <DependentUpon>Listing.aspx</DependentUpon>
+    <Compile Include="Listing_Pages\ListingDetails.aspx.cs">
+      <DependentUpon>ListingDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Listing_Pages\Listing.aspx.designer.cs">
-      <DependentUpon>Listing.aspx</DependentUpon>
+    <Compile Include="Listing_Pages\ListingDetails.aspx.designer.cs">
+      <DependentUpon>ListingDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Listing_Pages\ViewListings.aspx.cs">
       <DependentUpon>ViewListings.aspx</DependentUpon>

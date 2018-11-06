@@ -10,7 +10,7 @@
 namespace FSD_P2_pandahelp.Listing_Pages {
     
     
-    public partial class Listing {
+    public partial class ListingDetails {
         
         /// <summary>
         /// lblTitle control.
@@ -31,6 +31,15 @@ namespace FSD_P2_pandahelp.Listing_Pages {
         protected global::System.Web.UI.WebControls.Label lblModule;
         
         /// <summary>
+        /// lblStudents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStudents;
+        
+        /// <summary>
         /// lblDesc control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace FSD_P2_pandahelp.Listing_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDesc;
+        
+        /// <summary>
+        /// btnChat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnChat;
     }
 }

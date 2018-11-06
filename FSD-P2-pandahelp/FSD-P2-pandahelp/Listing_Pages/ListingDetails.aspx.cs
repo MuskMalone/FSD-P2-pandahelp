@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FSD_P2_pandahelp.Listing_Pages
 {
-    public partial class Listing : System.Web.UI.Page
+    public partial class ListingDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
