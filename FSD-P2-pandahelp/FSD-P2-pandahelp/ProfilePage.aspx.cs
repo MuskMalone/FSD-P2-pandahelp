@@ -14,7 +14,7 @@ namespace FSD_P2_pandahelp
 
         }
 
-        protected void btnChgnPass_Click(object sender, EventArgs e)
+        protected void btnChangePass_Click(object sender, EventArgs e)
         {
 
         }
