@@ -13,31 +13,49 @@ namespace FSD_P2_pandahelp {
     public partial class ProfilePage {
         
         /// <summary>
-        /// TextBox1 control.
+        /// studImg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Image studImg;
         
         /// <summary>
-        /// TextBox2 control.
+        /// imgUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.FileUpload imgUpload;
         
         /// <summary>
-        /// TextBox3 control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.Label lblName;
+        
+        /// <summary>
+        /// txtPersonalEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPersonalEmail;
+        
+        /// <summary>
+        /// txtSelfDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSelfDesc;
         
         /// <summary>
         /// btnUpdate control.
@@ -49,12 +67,21 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
-        /// btnChgnPass control.
+        /// btnChangePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnChgnPass;
+        protected global::System.Web.UI.WebControls.Button btnChangePass;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }
