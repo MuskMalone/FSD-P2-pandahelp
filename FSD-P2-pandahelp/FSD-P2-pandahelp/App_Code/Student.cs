@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace FSD_P2_pandahelp.App_Code
 {
@@ -107,7 +110,7 @@ namespace FSD_P2_pandahelp.App_Code
         }
         public int GetPass()
         {
-            /*string strConn = ConfigurationManager.ConnectionStrings["NPSPortfolio"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("Select Password from Student Where EmailAddr = @id", conn);
             cmd.Parameters.AddWithValue("@id", Email);
@@ -125,7 +128,7 @@ namespace FSD_P2_pandahelp.App_Code
             else
             {
                 return 0;
-            }*/
+            }
             return 1;
         }
         //  //
