@@ -18,7 +18,6 @@
         .hoverRow:hover 
         {
             background-color: #ffd1ce;
-            font-size: 20px;
         }
         .auto-style1 {
             height: 2px;
