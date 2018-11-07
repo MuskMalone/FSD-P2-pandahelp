@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
@@ -12,6 +16,32 @@ namespace FSD_P2_pandahelp
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            // Read inputs from textboxes
+            string Email = txtEmail.Text.ToLower(); //Textbox: txtLoginID
+            string password = txtPassword.Text; //Textbox: txtPassword
+            //Read selection of radio buttons
+            Student objStudent = new Student();
+            objStudent.Email = Email;
+            if (objStudent.GetPass() == 1)
+                {
+                    if (password == objStudent.password)
+                    {
+                        objStudent.GetDetails();
+                        Session["student"] = objStudent;
+                        Response.Redirect("~/Student/StudentHome.aspx");
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Incorrect credentials";
+                    }
+                }
+            else
+            {
+                lblMessage.Text = "Invalid Email";
+            }
         }
     }
 }

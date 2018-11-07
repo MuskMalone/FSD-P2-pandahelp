@@ -117,9 +117,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Student.cs" />
-    <Content Include="App_Code\Listing.cs" />
-    <Content Include="App_Code\Review.cs" />
+    <Compile Include="App_Code\Student.cs" />
+    <Compile Include="App_Code\Listing.cs" />
+    <Compile Include="App_Code\Review.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
