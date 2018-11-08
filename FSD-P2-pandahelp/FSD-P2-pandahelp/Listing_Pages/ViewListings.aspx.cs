@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using FSD-P2-pandahelp.App_Code;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp.Listing_Pages
 {
@@ -23,7 +23,7 @@ namespace FSD_P2_pandahelp.Listing_Pages
 
         private void displayListings()
         {
-            Listing objStudent = new Listing();
+            /*Listing objStudent = new Listing();
             objStudent.mentorID = Convert.ToInt32(Session["MentorID"]);
             string strConn = ConfigurationManager.ConnectionStrings
                             ["NPSPortfolio"].ToString();
@@ -45,7 +45,7 @@ namespace FSD_P2_pandahelp.Listing_Pages
             else
             {
                 gvPortfolio.DataBind();
-            }
+            }*/
         }
     }
 }
