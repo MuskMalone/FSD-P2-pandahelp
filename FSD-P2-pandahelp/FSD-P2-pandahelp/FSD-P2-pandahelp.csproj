@@ -75,9 +75,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Guest Page\GuestMenu.ascx" />
+    <Content Include="Guest Page\Login.aspx" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
-    <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Menu.ascx" />
     <Content Include="ProfilePage.aspx" />
@@ -103,6 +104,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Guest Page\Guest.Master" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -132,6 +134,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Guest Page\Guest.Master.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\Guest.Master.designer.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\GuestMenu.ascx.cs">
+      <DependentUpon>GuestMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\GuestMenu.ascx.designer.cs">
+      <DependentUpon>GuestMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Listing_Pages\ListingDetails.aspx.cs">
       <DependentUpon>ListingDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,13 +168,6 @@
     </Compile>
     <Compile Include="Listing_Pages\ViewListings.aspx.designer.cs">
       <DependentUpon>ViewListings.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
