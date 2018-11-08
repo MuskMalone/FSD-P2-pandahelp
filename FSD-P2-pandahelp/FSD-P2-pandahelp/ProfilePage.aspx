@@ -29,7 +29,7 @@
             <td colspan="3"><strong class="align-items-baseline">Update Profile</strong></td>
         </tr>
         <tr>
-            <td class="auto-style9" rowspan="6">
+            <td class="auto-style9" rowspan="8">
                 <asp:Image ID="studImg" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
@@ -38,6 +38,20 @@
                 Name:</td>
             <td>
                 <asp:Label ID="lblName" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                &nbsp;</td>
+            <td class="auto-style4">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                Course:</td>
+            <td class="auto-style4">
+                <asp:RadioButtonList ID="rdobtnCourse" runat="server" RepeatDirection="Horizontal">
+                </asp:RadioButtonList>
             </td>
         </tr>
         <tr>
