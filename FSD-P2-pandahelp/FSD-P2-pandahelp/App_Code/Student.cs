@@ -31,27 +31,9 @@ namespace FSD_P2_pandahelp.App_Code
 
         }
         // Login //
-        public int IdExist()
-        {
-
-            /*string strConn = ConfigurationManager.ConnectionStrings["NPSPortfolio"].ToString();
-            SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("Select * from Student Where StudentID = @id", conn);
-            cmd.Parameters.AddWithValue("@id", studID);
-            SqlDataAdapter pw = new SqlDataAdapter(cmd);
-            DataSet result = new DataSet();
-            conn.Open();
-            pw.Fill(result, "pwd");
-            conn.Close();
-            if (result.Tables["pwd"].Rows.Count > 0)
-            { return 1; }
-            else
-            { return 0; }*/
-            return 1;
-        }
         public void GetDetails()
         {
-            /*string strConn = ConfigurationManager.ConnectionStrings["NPSPortfolio"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("Select * from Student Where EmailAddr = @id", conn);
             cmd.Parameters.AddWithValue("@id", Email);
@@ -60,27 +42,24 @@ namespace FSD_P2_pandahelp.App_Code
             conn.Open();
             pw.Fill(result, "details");
             conn.Close();
-            studID = Convert.ToInt32(result.Tables[0].Rows[0]["StudentID"]);
-            name = result.Tables[0].Rows[0]["Name"].ToString();
+            PhoneNo = Convert.ToInt32(result.Tables[0].Rows[0]["PhoneNo"]);
+            Name = result.Tables[0].Rows[0]["Name"].ToString();
             course = result.Tables[0].Rows[0]["Course"].ToString();
             description = result.Tables[0].Rows[0]["Description"].ToString();
-            achievement = result.Tables[0].Rows[0]["Achievement"].ToString();
-            externallink = result.Tables[0].Rows[0]["ExternalLink"].ToString();
-            mentorID = Convert.ToInt32(result.Tables[0].Rows[0]["mentorID"]);
-            photo = result.Tables[0].Rows[0]["Photo"].ToString();*/
+            photo = result.Tables[0].Rows[0]["Photo"].ToString();
 
 
         }
-        public bool isEmailExist(string email)
+        public bool isEmailExist()
         {
-            /*string strConn = ConfigurationManager.ConnectionStrings
+            string strConn = ConfigurationManager.ConnectionStrings
                             ["NPSPortfolio"].ToString();
 
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
                            ("SELECT * FROM Student WHERE EmailAddr=@typedemail", conn);
 
-            cmd.Parameters.AddWithValue("@typedemail", email);
+            cmd.Parameters.AddWithValue("@typedemail", Email);
 
             SqlDataAdapter daEmail = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
@@ -92,21 +71,8 @@ namespace FSD_P2_pandahelp.App_Code
             if (result.Tables["EmailDetails"].Rows.Count > 0)
                 return false;
             else
-                return true;*/
-            return true;
-        }
-        public int GetStudentID()
-        {
-            /*string strConn = ConfigurationManager.ConnectionStrings
-                ["NPSPortfolio"].ToString();
-            SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT StudentID FROM Student WHERE Name = @name", conn);
-            cmd.Parameters.AddWithValue("@name", name);
-            conn.Open();
-            int id = (int)cmd.ExecuteScalar();
-            conn.Close();
-            return id;*/
-            return 1;
+                return true;
+           
         }
         public int GetPass()
         {

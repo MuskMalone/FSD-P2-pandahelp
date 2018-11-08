@@ -25,6 +25,8 @@ namespace FSD_P2_pandahelp
             //Read selection of radio buttons
             Student objStudent = new Student();
             objStudent.Email = Email;
+            if (objStudent.isEmailExist() == true)
+            { 
             if (objStudent.GetPass() == 1)
                 {
                     if (password == objStudent.password)
@@ -35,9 +37,10 @@ namespace FSD_P2_pandahelp
                     }
                     else
                     {
-                        lblMessage.Text = "Incorrect credentials";
+                        lblMessage.Text = "Incorrect Password";
                     }
                 }
+            }
             else
             {
                 lblMessage.Text = "Invalid Email";
