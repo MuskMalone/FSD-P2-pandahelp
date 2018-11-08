@@ -4,14 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class GuestMenu : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,8 +23,8 @@ namespace FSD_P2_pandahelp
             Student objStudent = new Student();
             objStudent.Email = Email;
             if (objStudent.isEmailExist() == true)
-            { 
-            if (objStudent.GetPass() == 1)
+            {
+                if (objStudent.GetPass() == 1)
                 {
                     if (password == objStudent.password)
                     {
@@ -45,6 +42,11 @@ namespace FSD_P2_pandahelp
             {
                 lblMessage.Text = "Invalid Email";
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

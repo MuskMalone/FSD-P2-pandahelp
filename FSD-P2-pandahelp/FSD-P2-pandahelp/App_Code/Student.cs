@@ -13,7 +13,7 @@ namespace FSD_P2_pandahelp.App_Code
         public string Name { get; set; }
         public int year{ get; set; }
         public string course { get; set; }
-        public int PhoneNo { get; set; }
+        public string PhoneNo { get; set; }
         public string CEmail { get; set; }
         public string description { get; set; }
         public string Email { get; set; }
@@ -49,7 +49,7 @@ namespace FSD_P2_pandahelp.App_Code
             Name = result.Tables[0].Rows[0]["Name"].ToString();
             year = Convert.ToInt32(result.Tables[0].Rows[0]["Year"]);
             course = result.Tables[0].Rows[0]["COS"].ToString();
-            PhoneNo = Convert.ToInt32(result.Tables[0].Rows[0]["ContactHP"]);
+            PhoneNo = result.Tables[0].Rows[0]["ContactHP"].ToString();
             CEmail = result.Tables[0].Rows[0]["ContactEmail"].ToString();
             description = result.Tables[0].Rows[0]["SDescription"].ToString();
             photo = result.Tables[0].Rows[0]["ProfilePic"].ToString();
