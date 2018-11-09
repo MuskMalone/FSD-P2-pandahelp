@@ -11,7 +11,7 @@ namespace FSD_P2_pandahelp
 {
 
 
-    public partial class Main
+    public partial class HomePage
     {
     }
 }

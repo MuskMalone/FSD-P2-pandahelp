@@ -10,7 +10,7 @@
 namespace FSD_P2_pandahelp {
     
     
-    public partial class pandahelp {
+    public partial class Guest {
         
         /// <summary>
         /// head control.
@@ -31,13 +31,13 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Menu control.
+        /// GuestMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FSD_P2_pandahelp.MainMenu Menu;
+        protected global::FSD_P2_pandahelp.GuestMenu GuestMenu;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

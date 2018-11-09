@@ -10,15 +10,15 @@
 namespace FSD_P2_pandahelp {
     
     
-    public partial class Menu {
+    public partial class ChangePassword {
         
         /// <summary>
-        /// btnLogOut control.
+        /// changePassForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogOut;
+        protected global::System.Web.UI.WebControls.ChangePassword changePassForm;
     }
 }

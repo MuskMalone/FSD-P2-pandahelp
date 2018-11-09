@@ -27,12 +27,22 @@ namespace FSD_P2_pandahelp
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            /*int errorCode1 =;
 
+            if (errorCode1 == 0)
+            {
+                lblMessage.Text = "Your profile has been updated!";
+            }
+            else if (errorCode1 == -2)
+            {
+                lblMessage.Text = "Unable to update profile!";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }*/
         }
 
         protected void btnChangePass_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ChangePassword.aspx");
         }
     }
 }

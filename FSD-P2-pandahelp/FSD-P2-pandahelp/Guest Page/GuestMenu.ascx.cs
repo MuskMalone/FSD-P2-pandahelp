@@ -4,14 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class GuestMenu : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,23 +22,31 @@ namespace FSD_P2_pandahelp
             //Read selection of radio buttons
             Student objStudent = new Student();
             objStudent.Email = Email;
-            if (objStudent.GetPass() == 1)
+            if (objStudent.isEmailExist() == true)
+            {
+                if (objStudent.GetPass() == 1)
                 {
                     if (password == objStudent.password)
                     {
                         objStudent.GetDetails();
                         Session["student"] = objStudent;
-                        Response.Redirect("~/Student/StudentHome.aspx");
+                        Response.Redirect("~/Listing_Pages/ListingDetails.aspx");
                     }
                     else
                     {
-                        lblMessage.Text = "Incorrect credentials";
+                        lblMessage.Text = "Incorrect Password";
                     }
                 }
+            }
             else
             {
                 lblMessage.Text = "Invalid Email";
             }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

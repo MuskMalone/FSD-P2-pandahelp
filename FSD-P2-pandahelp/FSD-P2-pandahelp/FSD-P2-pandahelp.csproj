@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -74,90 +75,41 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
-    <Content Include="Listing_Pages\ListingDetails.aspx" />
-    <Content Include="Listing_Pages\ViewListings.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
     <Content Include="Main.aspx" />
     <Content Include="Menu.ascx" />
-    <Content Include="ProfilePage.aspx" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
-    <Content Include="Scripts\jquery-3.0.0.js" />
-    <Content Include="Scripts\jquery-3.0.0.min.js" />
-    <Content Include="Scripts\jquery-3.0.0.slim.js" />
-    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\umd\popper-utils.js" />
-    <Content Include="Scripts\umd\popper-utils.min.js" />
-    <Content Include="Scripts\umd\popper.js" />
-    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Student.cs" />
     <Compile Include="App_Code\Listing.cs" />
     <Compile Include="App_Code\Review.cs" />
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Listing_Pages\ListingDetails.aspx.cs">
-      <DependentUpon>ListingDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Listing_Pages\ListingDetails.aspx.designer.cs">
-      <DependentUpon>ListingDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Listing_Pages\ViewListings.aspx.cs">
-      <DependentUpon>ViewListings.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Listing_Pages\ViewListings.aspx.designer.cs">
-      <DependentUpon>ViewListings.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menu.ascx.cs">
-      <DependentUpon>Menu.ascx</DependentUpon>
+    <Compile Include="MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.ascx.designer.cs">
-      <DependentUpon>Menu.ascx</DependentUpon>
+    <Compile Include="MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
     </Compile>
     <Compile Include="pandahelp.Master.cs">
       <DependentUpon>pandahelp.Master</DependentUpon>
