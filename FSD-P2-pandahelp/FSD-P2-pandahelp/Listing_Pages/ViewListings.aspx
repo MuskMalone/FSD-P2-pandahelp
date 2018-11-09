@@ -31,12 +31,16 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px">
+    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" AutoGenerateColumns="False">
         <Columns>
-            <asp:HyperLinkField HeaderText="" />
-            <asp:HyperLinkField HeaderText="Listings" />
-            <asp:BoundField HeaderText="" />
+            <asp:BoundField DataField="ListingID" Visible="False" />
+            <asp:HyperLinkField HeaderText="" DataTextField="title" />
+            <asp:HyperLinkField HeaderText="Listings" DataTextField="ModuleName" />
+            <asp:BoundField HeaderText="" DataField="DateTimeAdded" />
         </Columns>
+        <EmptyDataTemplate>
+            No listings at the moment!
+        </EmptyDataTemplate>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#ff766d" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />

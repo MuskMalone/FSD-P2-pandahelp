@@ -51,4 +51,7 @@
         </tr>
         </table>
 </div>
+                <asp:Label ID="username" runat="server"></asp:Label>
+    <asp:Label ID="payment" runat="server"></asp:Label>
+                <asp:Label ID="title" runat="server"></asp:Label>
                 </asp:Content>

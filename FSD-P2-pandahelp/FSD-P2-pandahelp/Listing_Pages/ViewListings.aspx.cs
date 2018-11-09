@@ -7,7 +7,8 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using FSD-P2-pandahelp.App_Code;
+using System.Drawing;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp.Listing_Pages
 {
@@ -23,29 +24,17 @@ namespace FSD_P2_pandahelp.Listing_Pages
 
         private void displayListings()
         {
-            Listing objStudent = new Listing();
-            objStudent.mentorID = Convert.ToInt32(Session["MentorID"]);
             string strConn = ConfigurationManager.ConnectionStrings
-                            ["NPSPortfolio"].ToString();
+                            ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Student WHERE MentorID = @mentorID ORDER BY StudentID", conn);
-            cmd.Parameters.AddWithValue("@mentorID", objStudent.mentorID);
-            SqlDataAdapter daStudent = new SqlDataAdapter(cmd);
+            SqlCommand cmd = new SqlCommand("SELECT ListingID, title, ModuleName, DateTimeAdded FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo ", conn);
+            SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
-            daStudent.Fill(result, "Student");
+            daListing.Fill(result, "Listing");
             conn.Close();
-            gvPortfolio.DataSource = result.Tables["Student"];
-            if (result.Tables["Student"].Rows.Count == 0)
-            {
-                lblError.Text = "No student portfolios found";
-                lblN.Visible = false;
-                lblY.Visible = false;
-            }
-            else
-            {
-                gvPortfolio.DataBind();
-            }
+            gvListing.DataSource = result.Tables["Listing"];
+            gvListing.DataBind();
         }
     }
 }
