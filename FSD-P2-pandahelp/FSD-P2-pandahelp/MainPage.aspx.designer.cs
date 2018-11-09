@@ -10,6 +10,6 @@
 namespace FSD_P2_pandahelp {
     
     
-    public partial class MainMenu {
+    public partial class MainPage {
     }
 }

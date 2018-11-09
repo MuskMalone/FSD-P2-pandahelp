@@ -26,10 +26,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table align="center" cellpadding="2" class="auto-style3">
         <tr>
-            <td colspan="3"><strong class="align-items-baseline">Update Profile</strong></td>
-        </tr>
-        <tr>
-            <td class="auto-style9" rowspan="8">
+            <td class="auto-style9" rowspan="7">
                 <asp:Image ID="studImg" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
@@ -75,7 +72,7 @@
         <tr>
             <td class="auto-style6">Self Description:</td>
             <td>
-                <asp:TextBox ID="txtSelfDesc" runat="server" OnTextChanged="txtSelfDesc_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtSelfDesc" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>

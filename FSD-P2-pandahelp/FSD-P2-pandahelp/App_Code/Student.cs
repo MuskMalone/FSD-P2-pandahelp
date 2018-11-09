@@ -100,7 +100,7 @@ namespace FSD_P2_pandahelp.App_Code
             {
                 return 0;
             }
-            return 1;
+           
         }
         //  //
     }

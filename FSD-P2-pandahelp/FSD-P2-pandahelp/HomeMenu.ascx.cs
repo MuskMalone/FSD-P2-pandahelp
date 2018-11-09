@@ -18,8 +18,7 @@ namespace FSD_P2_pandahelp
         {
             Session.Abandon();
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(),
-                    "alert", "alert('You have logged out!');window.location = 'Login.aspx';", true);
+
         }
     }
 }
