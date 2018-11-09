@@ -37,7 +37,7 @@ namespace FSD_P2_pandahelp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FSD_P2_pandahelp.Menu Menu;
+        protected global::FSD_P2_pandahelp.MainMenu Menu;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

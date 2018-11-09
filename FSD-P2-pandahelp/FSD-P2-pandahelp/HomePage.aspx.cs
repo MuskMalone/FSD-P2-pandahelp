@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FSD_P2_pandahelp
 {
-    public partial class Menu : System.Web.UI.UserControl
+    public partial class HomePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
