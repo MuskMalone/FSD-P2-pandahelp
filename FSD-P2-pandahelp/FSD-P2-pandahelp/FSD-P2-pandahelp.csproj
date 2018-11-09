@@ -79,6 +79,8 @@
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="Listing_Pages\ListingDetails.aspx" />
+    <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Menu.ascx" />
     <Content Include="Web.config" />
@@ -96,6 +98,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Listing_Pages\ListingDetails.aspx.cs">
+      <DependentUpon>ListingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listing_Pages\ListingDetails.aspx.designer.cs">
+      <DependentUpon>ListingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listing_Pages\ViewListings.aspx.cs">
+      <DependentUpon>ViewListings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listing_Pages\ViewListings.aspx.designer.cs">
+      <DependentUpon>ViewListings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
