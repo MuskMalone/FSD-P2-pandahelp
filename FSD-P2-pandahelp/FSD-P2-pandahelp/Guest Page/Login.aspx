@@ -36,7 +36,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px">
+    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" OnSelectedIndexChanged="gvListing_SelectedIndexChanged">
         <Columns>
             <asp:HyperLinkField HeaderText="" />
             <asp:HyperLinkField HeaderText="Listings" />
