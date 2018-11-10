@@ -46,7 +46,22 @@ namespace FSD_P2_pandahelp
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            if (ddlSearch.SelectedValue == "Student Name")
+            {
+                Student student = new Student();
+                student.Name = Search.Text;
+                Session["OfflineStudent"] = student;
+            }
+            else { 
+            Listing list = new Listing();
+            list.module = Search.Text;
+            Session["OfflineList"] = list;
+            }
+
+            Response.Redirect("~/Guest Page/Login.aspx");
 
         }
+
+        
     }
 }

@@ -10,6 +10,8 @@ namespace FSD_P2_pandahelp.App_Code
 {
     public class Student
     {
+        public int userprofileID { get; set; }
+        public string userID { get; set; }
         public string Name { get; set; }
         public int year{ get; set; }
         public string course { get; set; }
@@ -20,6 +22,7 @@ namespace FSD_P2_pandahelp.App_Code
         public string photo { get; set; }
         public int point { get; set; }
         public string password { get; set; }
+
         
 
         public void SentList()
@@ -46,6 +49,8 @@ namespace FSD_P2_pandahelp.App_Code
             conn.Open();
             pw.Fill(result, "details");
             conn.Close();
+            userprofileID = Convert.ToInt32(result.Tables[0].Rows[0]["UserProfileID"]);
+            userID = result.Tables[0].Rows[0]["UserID"].ToString();
             Name = result.Tables[0].Rows[0]["Name"].ToString();
             year = Convert.ToInt32(result.Tables[0].Rows[0]["Year"]);
             course = result.Tables[0].Rows[0]["COS"].ToString();
