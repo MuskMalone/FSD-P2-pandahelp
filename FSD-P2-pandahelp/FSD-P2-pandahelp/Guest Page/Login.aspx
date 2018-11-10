@@ -29,7 +29,9 @@
     <table class="w-100">
         <tr>
             <td class="auto-style1"></td>
-            <td class="auto-style1"></td>
+            <td class="auto-style1">
+                <asp:Label ID="lblError" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td>&nbsp;</td>

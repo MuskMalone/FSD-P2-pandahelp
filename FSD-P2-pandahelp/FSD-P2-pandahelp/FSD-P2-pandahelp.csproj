@@ -79,12 +79,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
+    <Content Include="Guest Page\GuestMenu.ascx" />
+    <Content Include="Guest Page\Login.aspx" />
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
-    <Content Include="js\bootstrap.bundle.js" />
-    <Content Include="js\bootstrap.bundle.min.js" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="MainMenu.ascx" />
@@ -105,6 +103,27 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\Guest.Master.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\Guest.Master.designer.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\GuestMenu.ascx.cs">
+      <DependentUpon>GuestMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\GuestMenu.ascx.designer.cs">
+      <DependentUpon>GuestMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeMenu.ascx.cs">
       <DependentUpon>HomeMenu.ascx</DependentUpon>
@@ -165,6 +184,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Guest Page\Guest.Master" />
     <None Include="packages.config" />
     <Content Include="pandahelp.Master" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
