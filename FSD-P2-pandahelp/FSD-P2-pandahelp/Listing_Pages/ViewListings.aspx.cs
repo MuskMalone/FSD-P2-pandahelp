@@ -27,7 +27,7 @@ namespace FSD_P2_pandahelp.Listing_Pages
             string strConn = ConfigurationManager.ConnectionStrings
                             ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT ListingID, title, ModuleName, DateTimeAdded FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT ListingID, title, ModuleName, DateCreated FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo ", conn);
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
