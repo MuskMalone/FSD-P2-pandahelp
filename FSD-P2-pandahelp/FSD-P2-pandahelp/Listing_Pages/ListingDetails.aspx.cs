@@ -22,10 +22,14 @@ namespace FSD_P2_pandahelp.Listing_Pages
                 int errorCode = objListing.getDetails();
                 if (errorCode == 0)
                 {
-                    username.Text = objListing.student;
-                    payment.Text = objListing.paymentMode;
-                    title.Text = objListing.title;
+                    lblTitle.Text = objListing.title;
+                    lblModule.Text = objListing.module;
+                    lblStudent.Text = objListing.student;
+                    lblPayment.Text = objListing.paymentMode;
+                    lblDesc.Text = objListing.desc;
+
                 }
+
             }
 
         }

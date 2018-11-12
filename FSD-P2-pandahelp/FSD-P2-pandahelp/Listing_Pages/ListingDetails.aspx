@@ -32,9 +32,15 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style5">Student(s)</td>
+            <td class="auto-style5">Student</td>
             <td class="auto-style5">
-                <asp:Label ID="lblStudents" runat="server"></asp:Label>
+                <asp:Label ID="lblStudent" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style5">Payment</td>
+            <td class="auto-style5">
+                <asp:Label ID="lblPayment" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -51,7 +57,4 @@
         </tr>
         </table>
 </div>
-                <asp:Label ID="username" runat="server"></asp:Label>
-    <asp:Label ID="payment" runat="server"></asp:Label>
-                <asp:Label ID="title" runat="server"></asp:Label>
                 </asp:Content>
