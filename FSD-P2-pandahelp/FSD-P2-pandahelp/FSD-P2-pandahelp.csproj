@@ -80,6 +80,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Guest Page\GuestMenu.ascx" />
+    <Content Include="Guest Page\GuestViewlisting.aspx" />
     <Content Include="Guest Page\Login.aspx" />
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="Guest Page\GuestMenu.ascx.designer.cs">
       <DependentUpon>GuestMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Guest Page\GuestViewlisting.aspx.cs">
+      <DependentUpon>GuestViewlisting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guest Page\GuestViewlisting.aspx.designer.cs">
+      <DependentUpon>GuestViewlisting.aspx</DependentUpon>
     </Compile>
     <Compile Include="Guest Page\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

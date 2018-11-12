@@ -60,11 +60,6 @@ namespace FSD_P2_pandahelp.Guest_Page
             Session["OfflineList"] = null;
         }
 
-        protected void gvListing_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Session["OfflineList"] = gvListing.SelectedValue;
-            lblError.Text = gvListing.SelectedValue.ToString();
-            lblError.Text = "?";
-        }
+        
     }
 }
