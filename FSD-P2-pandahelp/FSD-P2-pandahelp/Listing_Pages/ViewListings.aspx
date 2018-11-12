@@ -34,7 +34,7 @@
     <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" AutoGenerateColumns="False">
         <Columns>
             <asp:BoundField DataField="ListingID" Visible="False" />
-            <asp:HyperLinkField HeaderText="Title" DataTextField="title" />
+            <asp:HyperLinkField HeaderText="Title" DataTextField="title" DataNavigateUrlFields="ListingID" DataNavigateUrlFormatString="ListingDetails.aspx?listingid={0}" />
             <asp:HyperLinkField HeaderText="Module" DataTextField="ModuleName" />
             <asp:BoundField HeaderText="DatePosted" DataField="DateCreated" />
         </Columns>

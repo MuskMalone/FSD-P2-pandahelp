@@ -16,20 +16,26 @@ namespace FSD_P2_pandahelp.Listing_Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
-                Listing objListing = new Listing();
-                int errorCode = objListing.getDetails();
-                if (errorCode == 0)
+                if (Request.QueryString["listingid"] != null)
                 {
-                    lblTitle.Text = objListing.title;
-                    lblModule.Text = objListing.module;
-                    lblStudent.Text = objListing.student;
-                    lblPayment.Text = objListing.paymentMode;
-                    lblDesc.Text = objListing.desc;
-
+                    Listing objListing = new Listing();
+                    objListing.listingID = Convert.ToInt32(Request.QueryString["listingid"]);
+                    int errorCode = objListing.getDetails();
+                    if (errorCode == 0)
+                    {
+                        lblTitle.Text = objListing.title;
+                        lblModule.Text = objListing.module;
+                        lblStudent.Text = objListing.student;
+                        lblPayment.Text = objListing.paymentMode;
+                        lblDesc.Text = objListing.desc;
+                    }
+                    else if (errorCode == -2)
+                    {
+                        lblError.Text = "no listing details";
+                    }
                 }
-
             }
 
         }

@@ -26,9 +26,10 @@ namespace FSD_P2_pandahelp.App_Code
                 ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("SELECT * FROM listing INNER JOIN " +
-                                            "Module ON listing.ModuleNo = Module.ModuleNo" +
-                                            "INNER JOIN Payment ON listing.PaymentID = Payment.PaymentID" +
-                                            "INNER JOIN UserProfile ON listing.UserProfileID = UserProfile.UserProfileID", conn);
+                                            "Module ON listing.ModuleNo = Module.ModuleNo " +
+                                            "INNER JOIN Payment ON listing.PaymentID = Payment.PaymentID " +
+                                            "INNER JOIN UserProfile ON listing.UserProfileID = UserProfile.UserProfileID " +
+                                            "WHERE ListingID = @selectedListingID", conn);
             cmd.Parameters.AddWithValue("@selectedListingID", listingID);
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
@@ -38,15 +39,13 @@ namespace FSD_P2_pandahelp.App_Code
             if (result.Tables["ListingDetails"].Rows.Count > 0)
             {
                 DataTable table = result.Tables["ListingDetails"];
-                if (!DBNull.Value.Equals(table.Rows[0]["ListingID"]))
-                    listingID = Convert.ToInt32(table.Rows[0]["ListingID"]);
                 if (!DBNull.Value.Equals(table.Rows[0]["title"]))
                     title = table.Rows[0]["title"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["description"]))
                     desc = table.Rows[0]["description"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["ModuleName"]))
                     module = table.Rows[0]["ModuleName"].ToString();
-                if (!DBNull.Value.Equals(table.Rows[0]["ModeOfPayement"]))
+                if (!DBNull.Value.Equals(table.Rows[0]["ModeOfPayment"]))
                     paymentMode = table.Rows[0]["ModeOfPayment"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
                     student = table.Rows[0]["Name"].ToString();
