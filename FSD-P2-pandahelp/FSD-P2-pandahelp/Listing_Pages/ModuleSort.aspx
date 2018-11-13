@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pandahelp.Master" AutoEventWireup="true" CodeBehind="ViewListings.aspx.cs" Inherits="FSD_P2_pandahelp.Listing_Pages.ViewListings" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pandahelp.Master" AutoEventWireup="true" CodeBehind="ModuleSort.aspx.cs" Inherits="FSD_P2_pandahelp.Listing_Pages.ModuleSort" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -34,12 +34,12 @@
     <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" AutoGenerateColumns="False">
         <Columns>
             <asp:BoundField DataField="ListingID" Visible="False" />
-            <asp:BoundField DataField="ModuleNo" HeaderText="ModuleID" Visible="False" />
+            <asp:BoundField DataField="ModuleID" HeaderText="ModuleID" Visible="False" />
             <asp:HyperLinkField HeaderText="Title" DataTextField="title" DataNavigateUrlFields="ListingID" DataNavigateUrlFormatString="ListingDetails.aspx?listingid={0}" >
             <ControlStyle ForeColor="Black" />
             <ItemStyle ForeColor="Black" />
             </asp:HyperLinkField>
-            <asp:HyperLinkField HeaderText="Module" DataTextField="ModuleName" DataNavigateUrlFields="ModuleNo" DataNavigateUrlFormatString="ModuleSort.aspx?moduleno={0}" >
+            <asp:HyperLinkField HeaderText="Module" DataTextField="ModuleName" >
             <ControlStyle ForeColor="Black" />
             </asp:HyperLinkField>
             <asp:BoundField HeaderText="DatePosted" DataField="DateCreated" >
@@ -64,4 +64,3 @@
     </table>
     </div>
 </asp:Content>
-
