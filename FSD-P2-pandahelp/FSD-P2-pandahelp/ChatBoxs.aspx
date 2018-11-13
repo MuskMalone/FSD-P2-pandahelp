@@ -29,7 +29,7 @@
     <asp:TextBox ID="txtMessage" runat="server"></asp:TextBox>
 &nbsp;
     
-     <asp:LinkButton ID="btnSend" runat="server" CssClass="btn btn-primary" height="" width="" OnClick="btnSend_Click1"><span aria-hidden="true" class="glyphicon glyphicon-ok"></span></asp:LinkButton>
+     <button ID="btnSend" runat="server" class="btn btn-outline-primary" OnClick="btnSend_Click1">Send</button>
     
     <br />
 </asp:Content>
