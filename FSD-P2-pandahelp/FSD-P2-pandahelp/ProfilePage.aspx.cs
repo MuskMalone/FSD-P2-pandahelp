@@ -11,8 +11,8 @@ namespace FSD_P2_pandahelp
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            txtSelfDesc.Height = 200;
-            txtSelfDesc.Width = 500;
+            txtSelfDesc.Height = 50;
+            txtSelfDesc.Width = 300;
 		}
 
         protected void txtPersonalEmail_TextChanged(object sender, EventArgs e)
