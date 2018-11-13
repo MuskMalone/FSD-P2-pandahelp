@@ -87,9 +87,11 @@
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\pandahelp.jpg" />
+    <Content Include="Images\search.png" />
     <Content Include="Images\user.png" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ModuleSort.aspx" />
+    <Content Include="UpdateListing.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="MainMenu.ascx" />
     <Content Include="MainPage.aspx" />
@@ -176,6 +178,13 @@
     <Compile Include="Listing_Pages\ModuleSort.aspx.designer.cs">
       <DependentUpon>ModuleSort.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UpdateListing.aspx.cs">
+      <DependentUpon>UpdateListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateListing.aspx.designer.cs">
+      <DependentUpon>UpdateListing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Listing_Pages\ViewListings.aspx.cs">
       <DependentUpon>ViewListings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Icon\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
