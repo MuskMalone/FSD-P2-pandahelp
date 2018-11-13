@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <td class="auto-style2"colspan="2">
-                <asp:Button ID="btnChat" runat="server" Text="Start Chat" Width="162px" BackColor="#FF766D" BorderStyle="None" ClientIDMode="Static" EnableViewState="False" Height="34px" />
+                <asp:Button ID="btnChat" runat="server" Text="Start Chat" Width="162px" BackColor="#FF766D" BorderStyle="None" ClientIDMode="Static" EnableViewState="False" Height="34px" OnClick="btnChat_Click" />
             </td>
 
         </tr>

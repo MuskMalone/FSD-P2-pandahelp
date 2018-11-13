@@ -25,6 +25,9 @@
         .auto-style1 {
             height: 2px;
         }
+        .auto-style2 {
+            margin-bottom: 114px;
+        }
     </style>
     <table class="w-100">
         <tr>
@@ -36,12 +39,12 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" s AutoGenerateColumns="False">
+    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" s AutoGenerateColumns="False" CssClass="auto-style2">
         <Columns>
-            <asp:HyperLinkField HeaderText="" />
-            <asp:HyperLinkField HeaderText="Listings" />
-            <asp:BoundField HeaderText="" />
-            <asp:HyperLinkField DataNavigateUrlFields="ListingID" DataNavigateUrlFormatString="GuestViewlisting.aspx?ListingID={0}" Text="View" />
+            <asp:BoundField HeaderText="Title" DataField="title" />
+            <asp:BoundField DataField="ModuleName" HeaderText="Module" />
+            <asp:BoundField DataField="Datecreated" HeaderText="Datecreated" />
+            <asp:HyperLinkField HeaderText="" DataNavigateUrlFields="ListingID" DataNavigateUrlFormatString="GuestViewlisting.aspx?ListingID={0}" Text="View" />
         </Columns>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#ff766d" Font-Bold="True" ForeColor="White" />

@@ -15,16 +15,29 @@ namespace FSD_P2_pandahelp.Guest_Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!this.IsPostBack)
+            {
+                View();
+            }
+          
         }
         public void View()
         {
             int ListingID = Convert.ToInt32(Request["ListingID"]);
+            if (ListingID ==null)
+            {
+                lblStudents.Text = "oo";
+            }
+            else { 
             Listing list = new Listing();
             list.listingID = ListingID;
             list.getDetails();
-            
-           
+            lblTitle.Text = list.title;
+            lblDesc.Text = list.desc;
+            lblModule.Text = list.module;
+            lblStudents.Text = list.student;
+            }
+
         }
     }
 }
