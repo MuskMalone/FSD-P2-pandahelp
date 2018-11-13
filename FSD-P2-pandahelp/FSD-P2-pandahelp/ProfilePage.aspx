@@ -21,12 +21,19 @@
         .auto-style9 {
             width: 100px;
         }
+        .auto-style10 {
+            width: 110px;
+            height: 29px;
+        }
+        .auto-style11 {
+            height: 29px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table align="center" cellpadding="2" class="auto-style3">
         <tr>
-            <td class="auto-style9" rowspan="7">
+            <td class="auto-style9" rowspan="19">
                 <asp:Image ID="studImg" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
@@ -35,6 +42,20 @@
                 Name:</td>
             <td>
                 <asp:Label ID="lblName" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                &nbsp;</td>
+            <td class="auto-style4">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                Year:</td>
+            <td class="auto-style4">
+                <asp:RadioButtonList ID="rdoYear" runat="server">
+                </asp:RadioButtonList>
             </td>
         </tr>
         <tr>
@@ -58,6 +79,19 @@
                 &nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style6">
+                Phone Number:</td>
+            <td class="auto-style4">
+                <asp:TextBox ID="txtHP" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                &nbsp;</td>
+            <td class="auto-style4">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style7">
                 Personal Email:</td>
             <td class="auto-style8">
@@ -65,9 +99,9 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style6">
-                &nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style10">
+                </td>
+            <td class="auto-style11"></td>
         </tr>
         <tr>
             <td class="auto-style6">Self Description:</td>
@@ -80,22 +114,38 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style6">SkillSet:</td>
-            <td>&nbsp;</td>
+            <td class="auto-style6">Email:</td>
+            <td>
+                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+            </td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9"></td>
+            <td class="auto-style6">SkillSet:</td>
+            <td>
+                <asp:Label ID="lblSkillSet" runat="server"></asp:Label>
+                <br />
+                <asp:TextBox ID="txtSkillSet" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style6">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style6">Points:</td>
+            <td>
+                <asp:Label ID="lblPoints" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style6"></td>
             <td class="auto-style4">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
             <td class="auto-style6">
                 &nbsp;</td>
             <td>
