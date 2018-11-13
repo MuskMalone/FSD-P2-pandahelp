@@ -35,9 +35,15 @@ namespace FSD_P2_pandahelp.Listing_Pages
                     {
                         lblError.Text = "no listing details";
                     }
+                    Session["Listing"] = objListing;
                 }
             }
 
+        }
+
+        protected void btnChat_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ChatBoxs.aspx");
         }
     }
 }

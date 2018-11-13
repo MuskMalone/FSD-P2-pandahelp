@@ -19,6 +19,7 @@ namespace FSD_P2_pandahelp.App_Code
         public string paymentMode { get; set; }
         public bool solved { get; set; }
         public string student { get; set; }
+        public int userProfileID { get; set; }
 
         public int getDetails()
         {
@@ -49,6 +50,8 @@ namespace FSD_P2_pandahelp.App_Code
                     paymentMode = table.Rows[0]["ModeOfPayment"].ToString();
                 if (!DBNull.Value.Equals(table.Rows[0]["Name"]))
                     student = table.Rows[0]["Name"].ToString();
+                if (!DBNull.Value.Equals(table.Rows[0]["UserProfileID"]))
+                    userProfileID = Convert.ToInt32(table.Rows[0]["UserProfileID"]);
                 return 0;
             }
             else
