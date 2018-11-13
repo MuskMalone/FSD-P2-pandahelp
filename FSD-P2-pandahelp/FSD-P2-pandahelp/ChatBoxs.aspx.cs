@@ -24,7 +24,7 @@ namespace FSD_P2_pandahelp
         void InitialiseChat()
         {
             int ListingID = Convert.ToInt32(Request["ListingID"]);
-
+            c.ListingID = ListingID;
 
         }
         /* public void LoadChatbox()
