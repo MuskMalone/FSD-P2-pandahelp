@@ -16,8 +16,17 @@ namespace FSD_P2_pandahelp
             int number = Convert.ToInt32(TextBox1.Text);
 
 
+        }
+        private void displayListings()
+        {
+
+
+        }
+
+        protected void btnResolved_Click(object sender, EventArgs e)
+        {
             System.Data.SqlClient.SqlConnection sqlConnection1 =
-    new System.Data.SqlClient.SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;                             
+new System.Data.SqlClient.SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;                             
                         Initial Catalog=PandaHelp;                      
                         Integrated Security=SSPI;");
 
@@ -32,10 +41,10 @@ namespace FSD_P2_pandahelp
 
             Response.Redirect("UpdateListing.aspx?");
         }
-        private void displayListings()
+
+        protected void btnUResolved_Click(object sender, EventArgs e)
         {
-
-
+            Response.Redirect("UpdateListing.aspx?");
         }
     }
 }

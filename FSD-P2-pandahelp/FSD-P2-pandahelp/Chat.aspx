@@ -10,7 +10,8 @@
     <br />
     <asp:TextBox ID="TextBox1" runat="server" Height="138px" Width="283px"></asp:TextBox>
     <br />
-    <asp:Button ID="btnResolved" runat="server" Text="Resolved" />
+    <asp:Button ID="btnResolved" runat="server" Text="Resolved" OnClick="btnResolved_Click" />
+    <asp:Button ID="btnUResolved" runat="server" Text="Not Resolved" OnClick="btnUResolved_Click" />
     <br />
 &nbsp;
 </asp:Content>
