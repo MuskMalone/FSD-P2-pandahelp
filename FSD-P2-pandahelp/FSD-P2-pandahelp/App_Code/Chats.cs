@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace FSD_P2_pandahelp.App_Code
 {
-    public class Chat
+    public class Chats
     {
         public string TutorName { get; set; }
         public string TuteeName { get; set; }
