@@ -86,6 +86,8 @@
     <Content Include="Guest Page\Login.aspx" />
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\pandahelp.jpg" />
+    <Content Include="Images\user.png" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="MainMenu.ascx" />

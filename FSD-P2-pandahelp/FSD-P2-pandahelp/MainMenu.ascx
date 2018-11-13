@@ -21,23 +21,18 @@
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-                <a class="nav-link" href="Listings.aspx">Listings</a>
+                <a class="nav-link" href="ViewListings.aspx">Listings</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
                 <a class="nav-link" href="Modules.aspx">Modules</a>
             </li>
-            <span class="divider">|</span>
             
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <asp:Button ID="btnLogIn" runat="server" Text="Log In"
                     CssClass="btn btn-link nav-link" OnClick="btnLogIn_Click" Height="30px" Width="68px" />
-            </li>
-            <li class="nav-item">
-                <asp:Button ID="btnSignUp" runat="server" Text="Sign Up"
-                    CssClass="btn btn-link nav-link" OnClick="btnSignUp_Click" Height="30px" />
             </li>
         </ul>
     </div>
