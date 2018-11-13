@@ -2,6 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ChangePassword ID="changePassForm" runat="server" CancelDestinationPageUrl="~/ProfilePage.aspx" OnChangedPassword="changePassForm_ChangedPassword">
+    <asp:ChangePassword ID="changePassForm" runat="server" CancelDestinationPageUrl="~/ProfilePage.aspx" OnChangedPassword="changePassForm_ChangedPassword" ContinueDestinationPageUrl="~/ProfilePage.aspx">
     </asp:ChangePassword>
 </asp:Content>

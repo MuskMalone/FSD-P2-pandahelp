@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace FSD_P2_pandahelp
 {
@@ -13,6 +16,14 @@ namespace FSD_P2_pandahelp
 		{
             txtSelfDesc.Height = 50;
             txtSelfDesc.Width = 300;
+
+            if (!Page.IsPostBack)
+            {
+                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+                SqlConnection conn = new SqlConnection(strConn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE EmailAddr=@email", conn);
+                cmd.Parameters.AddWithValue("@email", Session["username"]);
+            }
 		}
 
         protected void txtPersonalEmail_TextChanged(object sender, EventArgs e)
