@@ -25,23 +25,23 @@ namespace FSD_P2_pandahelp
 
             System.Data.SqlClient.SqlCommand Modulecmd = new System.Data.SqlClient.SqlCommand();
             Modulecmd.CommandType = System.Data.CommandType.Text;
-            Modulecmd.CommandText = "INSERT Module (ModuleName) VALUES ('IT')";
+            Modulecmd.CommandText = "INSERT Module (ModuleName) VALUES ('" + txtModuleName.Text +"')";
             Modulecmd.Connection = sqlConnection1;
 
             System.Data.SqlClient.SqlCommand UserProfilecmd = new System.Data.SqlClient.SqlCommand();
             UserProfilecmd.CommandType = System.Data.CommandType.Text;
             UserProfilecmd.CommandText = "INSERT UserProfile (UserID,Name,Year,COS,ContactHP,ContactEmail,SDescription,Email,Skillset,ProfilePic,Point,Userpassword) " +
-            "VALUES ('s1018d','name',1986,'cos','contacthp','contactemail','desc','email','skillset','profilepic',10,'userpassword')";
+            "VALUES ("+"'"  + txtUserID.Text + "','"+txtName.Text+"','"+Convert.ToInt32(txtYear.Text)+"','"+ txtCOS.Text + "','"+ txtContactHp.Text +"','"+txtContactEmail.Text+"','" + txtSDescription.Text + "','" + txtEmail.Text +"','"+txtSkillset.Text+"','" + txtProfilePic.Text + "','"+txtPoint.Text+"','" + txtUserPassword.Text +"')";
             UserProfilecmd.Connection = sqlConnection1;
 
             System.Data.SqlClient.SqlCommand Paymentcmd = new System.Data.SqlClient.SqlCommand();
             Paymentcmd.CommandType = System.Data.CommandType.Text;
-            Paymentcmd.CommandText = "INSERT Payment (ModeOfPayment,ShortDescription,UserProfileID) VALUES ('cash','hello',1)";
+            Paymentcmd.CommandText = "INSERT Payment (ModeOfPayment,ShortDescription,UserProfileID) VALUES ('" + txtModeofPayment.Text +"','" + txtSDescription.Text +"','1')";
             Paymentcmd.Connection = sqlConnection1;
 
             System.Data.SqlClient.SqlCommand Listingcmd = new System.Data.SqlClient.SqlCommand();
             Listingcmd.CommandType = System.Data.CommandType.Text;
-            Listingcmd.CommandText = "INSERT Listing (title,description,ModuleNo,PaymentID,UserProfileID,UserID) VALUES ('title','description',1,1,1,'S19E0D')";
+            Listingcmd.CommandText = "INSERT Listing (title,description,ModuleNo,PaymentID,UserProfileID,UserID) VALUES ('" + txtTitle.Text + "','" + txtDesription.Text +"',1,1,1,'S19E0D')";
             Listingcmd.Connection = sqlConnection1;
 
 
