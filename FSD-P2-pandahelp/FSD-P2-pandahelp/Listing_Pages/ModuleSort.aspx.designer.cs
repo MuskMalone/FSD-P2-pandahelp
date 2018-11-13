@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FSD_P2_pandahelp {
+namespace FSD_P2_pandahelp.Listing_Pages {
     
     
-    public partial class MainMenu {
+    public partial class ModuleSort {
         
         /// <summary>
-        /// btnLogIn control.
+        /// gvListing control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogIn;
+        protected global::System.Web.UI.WebControls.GridView gvListing;
     }
 }

@@ -19,6 +19,7 @@ namespace FSD_P2_pandahelp.Guest_Page
             {
                 View();
             }
+          
         }
         public void View()
         {

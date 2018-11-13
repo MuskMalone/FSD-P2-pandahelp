@@ -18,10 +18,5 @@ namespace FSD_P2_pandahelp
         {
             Response.Redirect("Login.aspx");
         }
-
-        protected void btnSignUp_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SignUp.aspx");
-        }
     }
 }

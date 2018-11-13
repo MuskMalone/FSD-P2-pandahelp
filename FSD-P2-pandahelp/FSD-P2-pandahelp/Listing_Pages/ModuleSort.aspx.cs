@@ -12,13 +12,16 @@ using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp.Listing_Pages
 {
-    public partial class ViewListings : System.Web.UI.Page
+    public partial class ModuleSort : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
+            if (Request.QueryString["moduleno"] != null)
             {
-                displayListings();
+                if (!this.IsPostBack)
+                {
+                    displayListings();
+                }
             }
         }
 
@@ -27,7 +30,9 @@ namespace FSD_P2_pandahelp.Listing_Pages
             string strConn = ConfigurationManager.ConnectionStrings
                             ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo WHERE ResolvedStatus = 'N' ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo " +
+                                            "WHERE ResolvedStatus = 'N' AND listing.ModuleNo = @selectedModule", conn);
+            cmd.Parameters.AddWithValue("@selectedModule", Convert.ToInt32(Request.QueryString["moduleno"]));
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
