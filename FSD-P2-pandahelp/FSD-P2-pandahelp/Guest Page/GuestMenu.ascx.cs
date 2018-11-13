@@ -22,7 +22,7 @@ namespace FSD_P2_pandahelp
             //Read selection of radio buttons
             Student objStudent = new Student();
             objStudent.userID = userID;
-            if (objStudent.isEmailExist() == true)
+            if (objStudent.isIdExist() == true)
             {
                 if (objStudent.GetPass() == 1)
                 {

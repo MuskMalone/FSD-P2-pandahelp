@@ -42,8 +42,8 @@ namespace FSD_P2_pandahelp.App_Code
         {
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("Select * from UserProfile Where Email = @id", conn);
-            cmd.Parameters.AddWithValue("@id", Email);
+            SqlCommand cmd = new SqlCommand("Select * from UserProfile Where UserID = @id", conn);
+            cmd.Parameters.AddWithValue("@id", userID);
             SqlDataAdapter pw = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
@@ -61,24 +61,24 @@ namespace FSD_P2_pandahelp.App_Code
             point = Convert.ToInt32(result.Tables[0].Rows[0]["Point"]);
 
     }
-    public bool isEmailExist()
+    public bool isIdExist()
         {
             string strConn = ConfigurationManager.ConnectionStrings
                             ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
-                           ("SELECT * FROM UserProfile WHERE Email=@typedemail", conn);
+                           ("SELECT * FROM UserProfile WHERE UserID=@userID", conn);
 
-            cmd.Parameters.AddWithValue("@typedemail", Email);
+            cmd.Parameters.AddWithValue("@userID", userID);
 
-            SqlDataAdapter daEmail = new SqlDataAdapter(cmd);
+            SqlDataAdapter daUserId = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
 
             conn.Open();
-            daEmail.Fill(result, "EmailDetails");
+            daUserId.Fill(result, "UserDetails");
             conn.Close();
 
-            if (result.Tables["EmailDetails"].Rows.Count > 0)
+            if (result.Tables["UserDetails"].Rows.Count > 0)
                 return true;
             else
                 return false;
@@ -88,8 +88,8 @@ namespace FSD_P2_pandahelp.App_Code
         {
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("Select UserPassword from UserProfile Where Email = @id", conn);
-            cmd.Parameters.AddWithValue("@id", Email);
+            SqlCommand cmd = new SqlCommand("Select UserPassword from UserProfile Where UserID = @id", conn);
+            cmd.Parameters.AddWithValue("@id", userID);
             SqlDataAdapter pw = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
