@@ -25,6 +25,9 @@
         .auto-style1 {
             height: 2px;
         }
+        .auto-style2 {
+            margin-bottom: 114px;
+        }
     </style>
     <table class="w-100">
         <tr>
@@ -36,7 +39,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" s AutoGenerateColumns="False">
+    <asp:GridView ID="gvListing" runat="server" RowStyle-CssClass="hoverRow" CellPadding="4" ForeColor="#333333" GridLines="None" Width="970px" s AutoGenerateColumns="False" CssClass="auto-style2">
         <Columns>
             <asp:BoundField HeaderText="Title" DataField="title" />
             <asp:BoundField DataField="ModuleName" HeaderText="Module" />
