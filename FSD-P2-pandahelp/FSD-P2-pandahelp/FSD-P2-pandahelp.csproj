@@ -87,6 +87,7 @@
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\pandahelp.jpg" />
+    <Content Include="Images\search.png" />
     <Content Include="Images\user.png" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ModuleSort.aspx" />
@@ -252,6 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Icon\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

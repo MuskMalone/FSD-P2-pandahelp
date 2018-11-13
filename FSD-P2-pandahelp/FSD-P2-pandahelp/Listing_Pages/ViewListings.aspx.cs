@@ -24,10 +24,12 @@ namespace FSD_P2_pandahelp.Listing_Pages
 
         private void displayListings()
         {
+            Student objStudent = new Student();
             string strConn = ConfigurationManager.ConnectionStrings
                             ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo WHERE ResolvedStatus = 'N' ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM listing inner join Module on listing.ModuleNo = Module.ModuleNo WHERE ResolvedStatus = 'N' AND UserProfileID != @currentID", conn);
+            cmd.Parameters.AddWithValue("@currentID", objStudent.userprofileID);
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();

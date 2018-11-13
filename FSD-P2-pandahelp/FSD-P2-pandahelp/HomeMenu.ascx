@@ -1,19 +1,29 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HomeMenu.ascx.cs" Inherits="FSD_P2_pandahelp.HomeMenu" %>
 
 <nav class="navbar navbar-expand-md bg-light navbar-light">
-    <a class="navbar-brand" href="HomePage.aspx"
-        style="font-size:32px; font-weight:bold; color:#3399FF;">
-        <img src="~/Images/pandahelp.jpg" alt="Site Logo" style="height:25px; width: 25px" />
-        pandahelp
-    </a>
+    <nav class="navbar navbar-default" role="search">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="font-weight:bold; color:#FFDAB9;" href="HomePage.aspx"><img src="Images/pandahelp.jpg" alt="Site Logo" style="height:60px; width: 60px" />pandahelp</a>
+            </div>
 
-    <button class="navbar-toggler" type="button"
-        data-toggle="collapse" data-target="#Navbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div>
-
-    </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <form class="navbar-form navbar-left" role="search"> 
+                    <span class="input-group-addon searchbar-input-addon">
+                        <i class="fa fa-caret-down searchbar-select-icon"></i>
+                            <select class="searchbar-select form-control" name="context">
+                                <option selected="" value="LISTINGS">Listings</option>
+                                <option value="USERS">Users</option>
+                            </select>
+                    </span>
+<!-- navbar-form to include form, nafbar-left to align left -->
+                    <input type="text" class="form-control" placeholder="Search for listings or users">
+                        <button type="submit" class="btn btn-default"><img src="Images/search.png" style="height:20px; width: 20px" /></button>
+                </form>
+            </div>
+        
+        </div><!-- container-fluid -->
+    </nav>
     <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -21,7 +31,7 @@
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-                <a class="nav-link" href="Listings.aspx">Listings</a>
+                <a class="nav-link" href="~/Listing_Pages/ViewListings.aspx">Listings</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
@@ -29,7 +39,7 @@
             </li>
             <span class="divider">|</span>
             <li class="dropdown">
-                    <a class="dropdown-toggle" role="button" aria-expanded="false" data-toggled="dropdown"><img src="~/Images/user.png" alt="Profile Logo" style="height:25px; width: 25px" /></a>
+                    <a class="dropdown-toggle" role="button" aria-expanded="false" data-toggled="dropdown"><img src="Images/user.png" alt="Profile Logo" style="height:25px; width: 25px" /></a>
                 <ul class="dropdown-menu" role="menu">
                     <li>Profile</li>
                     <li><a href="ProfilePage.aspx">Edit Profile</a></li>
