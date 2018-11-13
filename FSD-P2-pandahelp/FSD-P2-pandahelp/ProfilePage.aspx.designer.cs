@@ -31,6 +31,24 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.FileUpload imgUpload;
         
         /// <summary>
+        /// lblImgName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImgName;
+        
+        /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+        
+        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -76,13 +94,31 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.TextBox txtSelfDesc;
         
         /// <summary>
-        /// txtemail control.
+        /// reqFieldValidSelfDesc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFieldValidSelfDesc;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// custValidEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator custValidEmail;
         
         /// <summary>
         /// lblSkillSet control.

@@ -73,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChangePassword.aspx" />
-    <Content Include="Chat.aspx" />
     <Content Include="ChatBoxs.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -113,13 +112,6 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Chat.aspx.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chat.aspx.designer.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChatBoxs.aspx.cs">
       <DependentUpon>ChatBoxs.aspx</DependentUpon>
