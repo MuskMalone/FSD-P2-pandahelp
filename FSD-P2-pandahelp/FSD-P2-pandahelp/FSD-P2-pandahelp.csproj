@@ -85,6 +85,7 @@
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
+    <Content Include="Listing_Pages\ModuleSort.aspx" />
     <Content Include="Listing_Pages\ViewListings.aspx" />
     <Content Include="MainMenu.ascx" />
     <Content Include="MainPage.aspx" />
@@ -154,6 +155,13 @@
     </Compile>
     <Compile Include="Listing_Pages\ListingDetails.aspx.designer.cs">
       <DependentUpon>ListingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listing_Pages\ModuleSort.aspx.cs">
+      <DependentUpon>ModuleSort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listing_Pages\ModuleSort.aspx.designer.cs">
+      <DependentUpon>ModuleSort.aspx</DependentUpon>
     </Compile>
     <Compile Include="Listing_Pages\ViewListings.aspx.cs">
       <DependentUpon>ViewListings.aspx</DependentUpon>
