@@ -29,14 +29,10 @@
     <asp:TextBox ID="txtShortDesc" runat="server" placeholder="ModuleName"></asp:TextBox>
     <br />
     Listing<br />
-    <asp:TextBox ID="txtModeofPayment0" runat="server" placeholder="ModuleName"></asp:TextBox>
-    <asp:TextBox ID="txtModeofPayment1" runat="server" placeholder="ModuleName"></asp:TextBox>
+    <asp:TextBox ID="txtTitle" runat="server" placeholder="ModuleName"></asp:TextBox>
+    <asp:TextBox ID="txtDesription" runat="server" placeholder="ModuleName"></asp:TextBox>
     <br />
-    <asp:TextBox ID="txtModeofPayment2" runat="server" placeholder="ModuleName"></asp:TextBox>
-    <asp:TextBox ID="txtModeofPayment3" runat="server" placeholder="ModuleName"></asp:TextBox>
     <br />
-    <asp:TextBox ID="txtModeofPayment4" runat="server" placeholder="ModuleName"></asp:TextBox>
-    <asp:TextBox ID="txtModeofPayment5" runat="server" placeholder="ModuleName"></asp:TextBox>
 <br />
 <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
 </asp:Content>

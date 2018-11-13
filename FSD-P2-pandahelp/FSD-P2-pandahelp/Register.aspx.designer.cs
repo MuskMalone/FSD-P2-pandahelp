@@ -148,58 +148,22 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.TextBox txtShortDesc;
         
         /// <summary>
-        /// txtModeofPayment0 control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment0;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
-        /// txtModeofPayment1 control.
+        /// txtDesription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment1;
-        
-        /// <summary>
-        /// txtModeofPayment2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment2;
-        
-        /// <summary>
-        /// txtModeofPayment3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment3;
-        
-        /// <summary>
-        /// txtModeofPayment4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment4;
-        
-        /// <summary>
-        /// txtModeofPayment5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment5;
+        protected global::System.Web.UI.WebControls.TextBox txtDesription;
         
         /// <summary>
         /// btnRegister control.

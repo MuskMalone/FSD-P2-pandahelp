@@ -17,11 +17,11 @@ namespace FSD_P2_pandahelp
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             // Read inputs from textboxes
-            string Email = txtEmail.Text.ToLower(); //Textbox: txtLoginID
+            string userID = txtStudentID.Text.ToLower(); //Textbox: txtLoginID
             string password = txtPassword.Text; //Textbox: txtPassword
             //Read selection of radio buttons
             Student objStudent = new Student();
-            objStudent.Email = Email;
+            objStudent.userID = userID;
             if (objStudent.isEmailExist() == true)
             {
                 if (objStudent.GetPass() == 1)
@@ -30,7 +30,7 @@ namespace FSD_P2_pandahelp
                     {
                         objStudent.GetDetails();
                         Session["student"] = objStudent;
-                        Response.Redirect("~/Listing_Pages/ListingDetails.aspx");
+                        Response.Redirect("~/Listing_Pages/ViewListings.aspx");
                     }
                     else
                     {
@@ -40,7 +40,7 @@ namespace FSD_P2_pandahelp
             }
             else
             {
-                lblMessage.Text = "Invalid Email";
+                lblMessage.Text = "Invalid ID";
             }
         }
 

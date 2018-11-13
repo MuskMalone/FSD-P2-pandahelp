@@ -13,28 +13,21 @@
         }
         .auto-style7 {
             width: 110px;
-            height: 27px;
+            height: 29px;
         }
         .auto-style8 {
-            height: 27px;
+            height: 29px;
         }
         .auto-style9 {
             width: 100px;
         }
-        .auto-style10 {
-            width: 110px;
-            height: 29px;
-        }
-        .auto-style11 {
-            height: 29px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table align="center" cellpadding="2" class="auto-style3">
         <tr>
-            <td class="auto-style9" rowspan="19">
-                <asp:Image ID="studImg" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
+            <td class="auto-style9" rowspan="17">
+                <asp:Image ID="imgStud" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
                 </td>
@@ -92,18 +85,6 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style7">
-                Personal Email:</td>
-            <td class="auto-style8">
-                <asp:TextBox ID="txtPersonalEmail" runat="server" OnTextChanged="txtPersonalEmail_TextChanged"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style10">
-                </td>
-            <td class="auto-style11"></td>
-        </tr>
-        <tr>
             <td class="auto-style6">Self Description:</td>
             <td>
                 <asp:TextBox ID="txtSelfDesc" runat="server"></asp:TextBox>
@@ -128,7 +109,10 @@
             <td>
                 <asp:Label ID="lblSkillSet" runat="server"></asp:Label>
                 <br />
-                <asp:TextBox ID="txtSkillSet" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="ddlSkillSet" runat="server">
+                </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnAdd" runat="server" Text="Add" />
             </td>
         </tr>
         <tr>
@@ -136,14 +120,15 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style6">Points:</td>
-            <td>
+            <td class="auto-style7">Points:</td>
+            <td class="auto-style8">
                 <asp:Label ID="lblPoints" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td class="auto-style6"></td>
-            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
+            <td class="auto-style8">
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style6">
