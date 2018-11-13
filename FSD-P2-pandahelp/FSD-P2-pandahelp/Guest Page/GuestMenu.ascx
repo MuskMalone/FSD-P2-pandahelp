@@ -48,7 +48,7 @@
             </li>
 
             <li class="nav-item">
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label></td>
+                <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
             </li>
            
            

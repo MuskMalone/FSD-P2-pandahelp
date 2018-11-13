@@ -27,7 +27,7 @@
     <table align="center" cellpadding="2" class="auto-style3">
         <tr>
             <td class="auto-style9" rowspan="17">
-                <asp:Image ID="studImg" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
+                <asp:Image ID="imgStud" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
                 </td>
@@ -109,7 +109,10 @@
             <td>
                 <asp:Label ID="lblSkillSet" runat="server"></asp:Label>
                 <br />
-                <asp:TextBox ID="txtSkillSet" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="ddlSkillSet" runat="server">
+                </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnAdd" runat="server" Text="Add" />
             </td>
         </tr>
         <tr>

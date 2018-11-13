@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Chats.cs" />
+    <Content Include="App_Code\ProfilePage.cs" />
     <Compile Include="App_Code\Student.cs" />
     <Compile Include="App_Code\Listing.cs" />
     <Compile Include="App_Code\Review.cs" />
