@@ -11,21 +11,20 @@ namespace FSD_P2_pandahelp.App_Code
     public class ProfilePage
     {
         public string name { get; set; }
-        public string year { get; set; }
+        public int year { get; set; }
         public string course { get; set; }
         public string phoneNo { get; set; }
         public string selfDesc { get; set; }
         public string email { get; set; }
         public string skillSet { get; set; }
-        public string points { get; set; }
+        public int points { get; set; }
 
         public int updateProfile()
         {
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
-                ("UPDATE Student SET ContactHP=@contactHP, SDescription=@sDescription, Email=@email, Skillset=@skillSet " +
-                "WHERE EmailAddr='" + HttpContext.Current.Session["username"] + "'", conn);
+                ("UPDATE Student SET ContactHP=@contactHP, SDescription=@sDescription, Email=@email, Skillset=@skillSet WHERE EmailAddr='" + HttpContext.Current.Session["username"] + "'", conn);
 
             cmd.Parameters.AddWithValue("@contactHP", phoneNo);
             cmd.Parameters.AddWithValue("@sDescription", selfDesc);
