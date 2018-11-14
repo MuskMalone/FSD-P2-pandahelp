@@ -15,8 +15,9 @@ namespace FSD_P2_pandahelp
     public partial class ChatBoxs : System.Web.UI.Page
     {
         Chats c = new Chats();
+        Student objStudent;
 
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -29,7 +30,7 @@ namespace FSD_P2_pandahelp
         void InitialiseChat()
         {
             Listing objListing = (Listing)Session["Listing"];
-            Student objStudent = (Student)Session["student"];
+            objStudent = (Student)Session["student"];
             c.ListingID = objListing.listingID;
             c.TuteeID = objListing.userProfileID;
             c.TutorID = objStudent.userprofileID;
@@ -93,9 +94,10 @@ namespace FSD_P2_pandahelp
                 string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
                 SqlConnection conn = new SqlConnection(strConn);
                 SqlCommand cmd = new SqlCommand
-                               ("insert into Message(ChatID,Message) values(@ChatID,@Message)", conn);
+                               ("insert into Message(ChatID,Message,SentID) values(@ChatID,@Message,@ID)", conn);
                 cmd.Parameters.AddWithValue("@ChatID", c.ChatID);
                 cmd.Parameters.AddWithValue("@Message", Message);
+                cmd.Parameters.AddWithValue("@ID", objStudent.userprofileID);
                 conn.Open();
                 int i = cmd.ExecuteNonQuery();
                 conn.Close();
