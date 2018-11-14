@@ -23,6 +23,7 @@ namespace FSD_P2_pandahelp
             Load_Frends();*/
             InitialiseChat();
             LoadChatbox();
+            
         }
         void InitialiseChat()
         {
@@ -60,22 +61,30 @@ namespace FSD_P2_pandahelp
 
         protected void btnSend_Click1(object sender, EventArgs e)
         {
-            string Message = txtMessage.Text;
-            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
-            SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand
-                           ("insert into Message(ChatID,Message) values(@ChatID,@Message)", conn);
-            cmd.Parameters.AddWithValue("@ChatID", c.ChatID);
-            cmd.Parameters.AddWithValue("@Message", Message);
-            conn.Open();
-            int i = cmd.ExecuteNonQuery();
-            conn.Close();
-            if (i >= 1)
+            if (string.IsNullOrWhiteSpace(txtMessage.Text))
             {
-                txtMessage.Text = "";
-                LoadChatbox();
+                txtMessage.Text = "?";
+            }
+            else { 
+                string Message = txtMessage.Text;
+                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+                SqlConnection conn = new SqlConnection(strConn);
+                SqlCommand cmd = new SqlCommand
+                               ("insert into Message(ChatID,Message) values(@ChatID,@Message)", conn);
+                cmd.Parameters.AddWithValue("@ChatID", c.ChatID);
+                cmd.Parameters.AddWithValue("@Message", Message);
+                conn.Open();
+                int i = cmd.ExecuteNonQuery();
+                conn.Close();
+                if (i >= 1)
+                {
+                    txtMessage.Text = "";
+                   
+                }
             }
         }
+
+       
         /* public void get_User()
 {
 Image1.ImageUrl = "images/" + Session["Image"].ToString();
