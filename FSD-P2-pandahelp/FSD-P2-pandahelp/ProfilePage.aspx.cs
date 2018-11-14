@@ -20,7 +20,7 @@ namespace FSD_P2_pandahelp
             txtSelfDesc.Width = 300;
             Student objStudent = (Student)Session["student"];
             //NEED UPDATE
-            if (!Page.IsPostBack)
+            /*if (!Page.IsPostBack)
             {
                 string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
                 SqlConnection conn = new SqlConnection(strConn);
@@ -43,7 +43,7 @@ namespace FSD_P2_pandahelp
                 ddlSkillSet = studentRow.Field<string>(9);
                 imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
                 lblPoints = studentRow.Field<string>(11);
-            }
+            }*/
         }
 
         private void displaySkillSet()
