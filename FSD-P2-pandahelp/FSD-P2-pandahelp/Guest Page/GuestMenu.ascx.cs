@@ -30,6 +30,7 @@ namespace FSD_P2_pandahelp
                     {
                         objStudent.GetDetails();
                         Session["student"] = objStudent;
+                        Student objStudents = (Student)Session["student"];
                         Response.Redirect("~/Listing_Pages/ViewListings.aspx");
                     }
                     else
