@@ -25,7 +25,9 @@ namespace FSD_P2_pandahelp
             Load_Frends();*/
             InitialiseChat();
             LoadChatbox();
-          
+            Load_Frends();
+
+
         }
         void InitialiseChat()
         {
@@ -68,20 +70,20 @@ namespace FSD_P2_pandahelp
 
         public void Load_Frends()
         {
-            /*string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
-                           ("select Tutee,Image from [Register] where Name!='" + Label1.Text + "'", conn);
-            cmd.Parameters.AddWithValue("@chat", c.ChatID);
-            conn.Open();
+                           (" select title from PrivateChat p inner join Listing l on p.ListingID = l.ListingID inner join ChatPerson c on p.ChatID = c.ChatID where c.ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id; select Name,ProfilePic,ChatID from UserProfile u inner join ChatPerson c on u.UserProfileID = c.UserProfileID where ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id;", conn);
+            cmd.Parameters.AddWithValue("@id", c.TutorID);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
+            conn.Open();
             da.Fill(ds);
+            conn.Close();
             //DataList2.DataSource = ds;
             //DataList2.DataBind();
-            DataList1.DataSource = ds;
-            DataList1.DataBind();
-            conn.Close();*/
+            Inbox.DataSource = ds;
+            Inbox.DataBind();
         }
         protected void btnSend_Click1(object sender, EventArgs e)
         {

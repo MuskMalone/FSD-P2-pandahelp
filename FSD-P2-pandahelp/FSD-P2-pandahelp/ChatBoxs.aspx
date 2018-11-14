@@ -15,9 +15,11 @@
                    <div class="card m-b-0" id="messages-main" style="box-shadow:0 0 40px 1px #c9cccd;">
                       <div class="ms-menu" style="overflow:scroll; overflow-x: hidden;" id="ms-scrollbar"> 
                           <div class="listview lv-user m-t-20">
-                              <asp:DataList ID="DataList1" runat="server" OnItemDataBound="DataList1_ItemDataBound">
+                              <asp:DataList ID="Inbox" runat="server" OnItemDataBound="DataList1_ItemDataBound">
                                      <ItemTemplate>
-                                          
+                                          <asp:Label ID="title" runat="server" Text='<%# Bind("title") %>'></asp:Label>
+                                         <asp:Label ID="Name" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                                             
                                       </ItemTemplate>
                               </asp:DataList>                                                                    
                           </div>
