@@ -18,6 +18,9 @@
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
+    <script type="text/javascript"> window.onload = function () {
+     $("#dvScroll").scrollTop(10000);
+        };</script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
