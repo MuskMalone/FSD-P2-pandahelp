@@ -14,6 +14,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">  
                 <br />
+                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                  <br />
                 <asp:DropDownList ID="ddlSearch" runat="server" >
                     <asp:ListItem>Student Name</asp:ListItem>
