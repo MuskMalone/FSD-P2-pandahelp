@@ -4,7 +4,7 @@
     <nav class="navbar navbar-default" role="search">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="font-weight:bold; color:#FFDAB9;" href="HomePage.aspx"><img src="Images/pandahelp.jpg" alt="Site Logo" style="height:60px; width: 60px" />pandahelp</a>
+                <a class="navbar-brand" style="font-weight:bold; color:#FFDAB9;" href="HomePage.aspx"><img src="Images/pandahelp.png" alt="Site Logo" style="height:60px; width: 60px" />pandahelp</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -37,9 +37,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="Modules.aspx">Modules</a>
             </li>
-            <span class="divider">|</span>
-            <li class="dropdown">
-                    <a class="dropdown-toggle" role="button" aria-expanded="false" data-toggled="dropdown"><img src="Images/user.png" alt="Profile Logo" style="height:25px; width: 25px" /></a>
+
+            <li class="dropdown" >
+                    <a class="dropdown-toggle" role="button" aria-expanded="false" data-toggled="dropdown"><img src="Images/user.png" alt="Profile Logo" style="height:50px; width: 50px" /></a>
                 <ul class="dropdown-menu" role="menu">
                     <li>Profile</li>
                     <li><a href="ProfilePage.aspx">Edit Profile</a></li>
