@@ -77,20 +77,12 @@
                   <img src="/Images/user.png" alt="Profile Logo" style="height:25px; width: 25px" />
               </button>
               <div class="dropdown-content">
+                <a href="CreateListing.aspx">Create New Listing</a>
                 <a href="ProfilePage.aspx">Edit Profile</a>
                 <a href="ChangePassword.aspx">Change Password</a>
                 <a href="Login.aspx">Log out</a>
               </div>
             </div>
-            <!--li class="dropdown">
-                    <a class="dropdown-toggle" role="button" aria-expanded="false" data-toggled="dropdown"><img src="Images/user.png" alt="Profile Logo" style="height:25px; width: 25px" /></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li>Profile</li>
-                    <li><a href="ProfilePage.aspx">Edit Profile</a></li>
-                    <li><a href="ChangePassword.aspx">Change Password</a></li>
-                    <li><asp:Button ID="btnLogOut" runat="server" Text="LogOut" CssClass="btn btn-link nav-link" OnClick="btnLogOut_Click"></asp:Button></li>
-                </ul>
-                </li-->
         </ul>
     </div>
 </nav>
