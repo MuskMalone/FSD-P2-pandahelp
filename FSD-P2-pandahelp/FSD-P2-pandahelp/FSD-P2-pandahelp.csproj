@@ -73,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChangePassword.aspx" />
-    <Content Include="Chat.aspx" />
     <Content Include="ChatBoxs.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -87,9 +86,11 @@
     <Content Include="Guest Page\Login.aspx" />
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
-    <Content Include="Images\pandahelp.png" />
+    <Content Include="Images\Icon\Send.icon.png" />
+    <Content Include="Images\pandahelp.jpg" />
     <Content Include="Images\search.png" />
     <Content Include="Images\user.png" />
+    <Content Include="Listing_Pages\CreateListing.aspx" />
     <Content Include="Listing_Pages\ListingDetails.aspx" />
     <Content Include="Listing_Pages\ModuleSort.aspx" />
     <Content Include="UpdateListing.aspx" />
@@ -112,13 +113,6 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Chat.aspx.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chat.aspx.designer.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChatBoxs.aspx.cs">
       <DependentUpon>ChatBoxs.aspx</DependentUpon>
@@ -171,6 +165,13 @@
     </Compile>
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listing_Pages\CreateListing.aspx.cs">
+      <DependentUpon>CreateListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Listing_Pages\CreateListing.aspx.designer.cs">
+      <DependentUpon>CreateListing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Listing_Pages\ListingDetails.aspx.cs">
       <DependentUpon>ListingDetails.aspx</DependentUpon>

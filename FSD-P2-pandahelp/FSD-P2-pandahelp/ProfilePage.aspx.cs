@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
@@ -16,43 +18,31 @@ namespace FSD_P2_pandahelp
 		{
             txtSelfDesc.Height = 50;
             txtSelfDesc.Width = 300;
-
+            Student objStudent = (Student)Session["student"];
+            //NEED UPDATE
             if (!Page.IsPostBack)
             {
-                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
-                SqlConnection conn = new SqlConnection(strConn);
-                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE EmailAddr=@email", conn);
-                cmd.Parameters.AddWithValue("@email", Session["username"]);
-
-                SqlDataAdapter daStudent = new SqlDataAdapter(cmd);
-                DataSet result = new DataSet();
-                conn.Open();
-                daStudent.Fill(result, "StudentDetails");
-                conn.Close();
-
-                /*DataRow studentRow = result.Tables["StudentDetails"].Rows[0];
-                lblName = studentRow.Field<string>(2);
-                rdoYear = studentRow.Field<>(3);
+                objStudent.GetDetails();
+                lblName.Text = objStudent.Name;
+                /*rdoYear = studentRow.Field<int>(3);
                 rdobtnCourse.Text = studentRow.Field<string>(4);
                 txtHP.Text = studentRow.Field<string>(5);
-                txtemail.Text = studentRow.Field<string>(6);
+                txtEmail.Text = studentRow.Field<string>(6);
                 txtSelfDesc.Text = studentRow.Field<string>(7);
-                lblSkillSet = (9);
-                imgStud.ImageUrl = "~/StudentsImage/" + studentRow.Field<string>(10);
-                lblPoints = (11);*/
+                ddlSkillSet = studentRow.Field<string>(9);
+                imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
+                lblPoints = studentRow.Field<string>(11);*/
             }
-		}
+        }
 
         private void displaySkillSet()
         {
             if (!Page.IsPostBack)
             {
-                string strConn = ConfigurationManager.ConnectionStrings["Student_EPortfolioConnectionString"].ToString();
-
+                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
                 SqlConnection conn = new SqlConnection(strConn);
 
                 SqlCommand cmd = new SqlCommand("SELECT * from SkillSet", conn);
-
                 SqlDataAdapter daSkill = new SqlDataAdapter(cmd);
 
                 DataSet result = new DataSet();
@@ -70,14 +60,35 @@ namespace FSD_P2_pandahelp
             }
         }
 
-        protected void txtPersonalEmail_TextChanged(object sender, EventArgs e)
+        private void posterPhoto()
         {
+            string uploadedFile = "";
 
-        }
+            if (imgUpload.HasFile == true)
+            {
+                string savePath;
+                string fileText = Path.GetExtension(imgUpload.FileName);
 
-        protected void txtSelfDesc_TextChanged(object sender, EventArgs e)
-        {
+                uploadedFile = lblImgName + fileText;
+                savePath = MapPath("~/Images/" + uploadedFile);
 
+                try
+                {
+                    imgUpload.SaveAs(savePath);
+                    lblMsg.Text = "Upload successful!";
+                    imgStud.ImageUrl = "~/Images/" + uploadedFile;
+                }
+
+                catch (IOException)
+                {
+                    lblMsg.Text = "Unable to upload!";
+                }
+
+                catch (Exception ex)
+                {
+                    lblMsg.Text = ex.Message;
+                }
+            }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

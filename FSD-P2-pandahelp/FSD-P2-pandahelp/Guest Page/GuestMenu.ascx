@@ -35,8 +35,7 @@
             <li class="nav-item" >
                 <table>
                     <tr>
-                        <td class="auto-style9" ><small>School email:</small><br /><asp:TextBox ID="txtStudentID" runat="server" BackColor="White" TextMode="Email" ToolTip="e-mail address" Height="20px" Font-Size ="Small"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="revStudentID" runat="server" ControlToValidate="txtStudentID" Display="Dynamic" ErrorMessage="Enter a valid Student ID" ForeColor="Red" ValidationExpression="^[S]\d{8}[A-Z]$"></asp:RegularExpressionValidator>
+                        <td class="auto-style9" ><small>School email:</small><br /><asp:TextBox ID="txtStudentID" runat="server" BackColor="White" Height="20px" Font-Size ="Small"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

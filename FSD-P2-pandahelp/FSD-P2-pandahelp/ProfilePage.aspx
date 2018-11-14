@@ -30,6 +30,9 @@
                 <asp:Image ID="imgStud" runat="server" ImageAlign="Middle" CssClass="img-fluid" />
                 <br />
                 <asp:FileUpload ID="imgUpload" runat="server" Height="27px" />
+                <br />
+                <asp:Label ID="lblImgName" runat="server"></asp:Label>
+                <asp:Label ID="lblMsg" runat="server"></asp:Label>
                 </td>
             <td class="auto-style6">
                 Name:</td>
@@ -88,6 +91,7 @@
             <td class="auto-style6">Self Description:</td>
             <td>
                 <asp:TextBox ID="txtSelfDesc" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="reqFieldValidSelfDesc" runat="server" ControlToValidate="txtSelfDesc" ErrorMessage="Please input a short Self Description!" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -97,7 +101,8 @@
         <tr>
             <td class="auto-style6">Email:</td>
             <td>
-                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                <asp:CustomValidator ID="custValidEmail" runat="server" ControlToValidate="txtEmail" Display="Dynamic" ErrorMessage="Please input a valid email!" ForeColor="Red"></asp:CustomValidator>
             </td>
         </tr>
         <tr>

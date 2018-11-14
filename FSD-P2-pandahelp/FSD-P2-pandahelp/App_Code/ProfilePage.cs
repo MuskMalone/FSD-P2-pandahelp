@@ -18,7 +18,7 @@ namespace FSD_P2_pandahelp.App_Code
         public string email { get; set; }
         public string skillSet { get; set; }
         public string points { get; set; }
-        
+
         public int updateProfile()
         {
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();

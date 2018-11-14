@@ -13,15 +13,6 @@ namespace FSD_P2_pandahelp {
     public partial class Register {
         
         /// <summary>
-        /// txtModuleName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModuleName;
-        
-        /// <summary>
         /// txtUserID control.
         /// </summary>
         /// <remarks>
@@ -112,15 +103,6 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.TextBox txtProfilePic;
         
         /// <summary>
-        /// txtPoint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPoint;
-        
-        /// <summary>
         /// txtUserPassword control.
         /// </summary>
         /// <remarks>
@@ -130,42 +112,6 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.TextBox txtUserPassword;
         
         /// <summary>
-        /// txtModeofPayment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModeofPayment;
-        
-        /// <summary>
-        /// txtShortDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShortDesc;
-        
-        /// <summary>
-        /// txtTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
-        /// <summary>
-        /// txtDesription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesription;
-        
-        /// <summary>
         /// btnRegister control.
         /// </summary>
         /// <remarks>
@@ -173,5 +119,14 @@ namespace FSD_P2_pandahelp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegister;
+        
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
     }
 }
