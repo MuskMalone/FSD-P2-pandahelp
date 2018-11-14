@@ -37,6 +37,7 @@ namespace FSD_P2_pandahelp.App_Code
         {
 
         }
+
         // Login //
         public void GetDetails()
         {
@@ -59,9 +60,9 @@ namespace FSD_P2_pandahelp.App_Code
             description = result.Tables[0].Rows[0]["SDescription"].ToString();
             photo = result.Tables[0].Rows[0]["ProfilePic"].ToString();
             point = Convert.ToInt32(result.Tables[0].Rows[0]["Point"]);
+        }
 
-    }
-    public bool isIdExist()
+        public bool isIdExist()
         {
             string strConn = ConfigurationManager.ConnectionStrings
                             ["PandaHelp"].ToString();
@@ -107,6 +108,5 @@ namespace FSD_P2_pandahelp.App_Code
             }
            
         }
-        //  //
     }
 }
