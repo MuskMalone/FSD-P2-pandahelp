@@ -81,6 +81,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Css\Chat.css" />
     <Content Include="Global.asax" />
     <Content Include="Guest Page\GuestMenu.ascx" />
     <Content Include="Guest Page\GuestViewlisting.aspx" />

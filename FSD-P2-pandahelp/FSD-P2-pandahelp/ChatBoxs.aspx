@@ -5,18 +5,7 @@
    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <style type="text/css">
-        .auto-style2 {
-            width: 100%;
-        }
-        .auto-style3 {
-            height: 773px;
-        }
-          #dvScroll::-webkit-scrollbar-track{background-color:#CCCCCC;}
-          #dvScroll::-webkit-scrollbar{width: 7px;background-color: #F5F5F5;}
-          #dvScrollr::-webkit-scrollbar-thumb{background-color:#eeeeee;-webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);}
-        .ms-new{box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12); background-color:#2196f3;}
-    </style>
+   
      <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                          <table class="auto-style2">
                            <tr>   
@@ -82,7 +71,7 @@
                                            <asp:TextBox ID="txtMessage" runat="server"></asp:TextBox>
                                            <asp:Button ID="Button1" runat="server" class="btn btn-outline-primary" Text="Send" OnClick="btnSend_Click1" />
                                            <div class="container-sidebar">
-                                               <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                                               <asp:Label CssClass="Label3" ID="Label3" runat="server" Text="Label"></asp:Label>
                                            </div>
                                        </div>
                                    </div>
