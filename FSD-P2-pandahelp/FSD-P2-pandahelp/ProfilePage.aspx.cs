@@ -22,16 +22,27 @@ namespace FSD_P2_pandahelp
             //NEED UPDATE
             if (!Page.IsPostBack)
             {
-                objStudent.GetDetails();
-                lblName.Text = objStudent.Name;
-                /*rdoYear = studentRow.Field<int>(3);
+                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+                SqlConnection conn = new SqlConnection(strConn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE EmailAddr=@email", conn);
+                cmd.Parameters.AddWithValue("@email", Session["username"]);
+
+                SqlDataAdapter daStudent = new SqlDataAdapter(cmd);
+                DataSet result = new DataSet();
+                conn.Open();
+                daStudent.Fill(result, "StudentDetails");
+                conn.Close();
+
+                DataRow studentRow = result.Tables["StudentDetails"].Rows[0];
+                lblName = studentRow.Field<string>(2);
+                rdoYear = studentRow.Field<int>(3);
                 rdobtnCourse.Text = studentRow.Field<string>(4);
                 txtHP.Text = studentRow.Field<string>(5);
                 txtEmail.Text = studentRow.Field<string>(6);
                 txtSelfDesc.Text = studentRow.Field<string>(7);
                 ddlSkillSet = studentRow.Field<string>(9);
                 imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
-                lblPoints = studentRow.Field<string>(11);*/
+                lblPoints = studentRow.Field<string>(11);
             }
         }
 
