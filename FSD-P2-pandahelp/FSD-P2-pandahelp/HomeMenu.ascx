@@ -1,4 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HomeMenu.ascx.cs" Inherits="FSD_P2_pandahelp.HomeMenu" %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <style>
 .dropbtn {
     background-color: transparent;
@@ -6,6 +10,10 @@
     padding: 16px;
     font-size: 16px;
     border: none;
+}
+
+.btn-create {
+    background-color:#ff766d;
 }
 
 .dropdown {
@@ -34,6 +42,71 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 </style>
+  <div class="modal fade" id="createListingModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Create Listing</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+              <table class="auto-style1">
+        <tr>
+            <td class="auto-style3">Title</td>
+            <td>
+                <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">Description</td>
+            <td>
+                <asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">Module</td>
+            <td>
+                <asp:DropDownList ID="ddlModule" runat="server">
+                </asp:DropDownList>
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">Payment</td>
+            <td>
+                <asp:DropDownList ID="ddlPayment" runat="server">
+                </asp:DropDownList>
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <asp:Button ID="btnCreate" runat="server" Text="Create Listing" type="button" class="btn-create btn btn-secondary" AutoPostback="False"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 <nav class="navbar navbar-expand-md bg-light navbar-light">
     <nav class="navbar navbar-default" role="search">
         <div class="container-fluid">
@@ -77,11 +150,12 @@
                 <img src="/Images/user.png" alt="Profile Logo" style="height:50px; width: 50px" />
             </button>
             <div class="dropdown-content">
-                <a href="CreateListing.aspx">Create Listing</a>
+                <a data-toggle="modal" data-target="#createListingModal">Create Listing</a>
                 <a href="ProfilePage.aspx">Edit Profile</a>
                 <a href="ChangePassword.aspx">Change Password</a>
                 <a href="Login.aspx">Log out</a>
             </div>
         </div>
     </div>
+
 </nav>
