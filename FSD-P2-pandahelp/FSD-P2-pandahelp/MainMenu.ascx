@@ -11,7 +11,7 @@
     <nav class="navbar navbar-default" role="search">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="font-weight:bold; color:#FFDAB9;" href="MainPage.aspx"><img src="Images/pandahelp.jpg" alt="Site Logo" style="height:60px; width: 60px" />pandahelp</a>
+                <a class="navbar-brand" style="font-weight:bold; color:#FFDAB9;" href="MainPage.aspx"><img src="~/Images/pandahelp.jpg" alt="Site Logo" style="height:60px; width: 60px" />pandahelp</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">

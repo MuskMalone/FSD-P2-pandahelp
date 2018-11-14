@@ -1,7 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="pandahelp.master.cs" Inherits="FSD_P2_pandahelp.pandahelp" %>
 
-<%@ Register Src="~/MainMenu.ascx" TagPrefix="uc1" TagName="MainMenu" %>
 <%@ Register Src="~/HomeMenu.ascx" TagPrefix="uc1" TagName="HomeMenu" %>
+
+
+
+
 
 <!DOCTYPE html>
 
@@ -23,7 +26,7 @@
         <div class="container" style="margin:auto;">
             <div class="row">
                 <div class="col-sm-12">
-                    <uc1:MainMenu runat="server" id="Menu" />
+                    <uc1:HomeMenu runat="server" ID="HomeMenu" />
                 </div>
             </div>
             <div class="row">
