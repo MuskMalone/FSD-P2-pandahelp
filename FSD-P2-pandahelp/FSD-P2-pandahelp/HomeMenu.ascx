@@ -80,7 +80,7 @@
                 <a href="CreateListing.aspx">Create New Listing</a>
                 <a href="ProfilePage.aspx">Edit Profile</a>
                 <a href="ChangePassword.aspx">Change Password</a>
-                <a href="Login.aspx">Log out</a>
+                <a href="Login.aspx" onclick="Session.Abandon()">Log out</a>
               </div>
             </div>
         </ul>
