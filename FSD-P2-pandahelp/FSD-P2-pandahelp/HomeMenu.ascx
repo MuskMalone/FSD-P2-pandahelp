@@ -151,6 +151,7 @@
             </button>
             <div class="dropdown-content">
                 <a data-toggle="modal" data-target="#createListingModal">Create Listing</a>
+                <a href="ChatBoxs.aspx">View Inbox</a>
                 <a href="ProfilePage.aspx">Edit Profile</a>
                 <a href="ChangePassword.aspx">Change Password</a>
                 <a href="Login.aspx">Log out</a>
