@@ -32,16 +32,6 @@ namespace FSD_P2_pandahelp
                 daStudent.Fill(result, "StudentDetails");
                 conn.Close();
 
-                DataRow studentRow = result.Tables["StudentDetails"].Rows[0];
-                lblName = studentRow.Field<string>(2);
-                rdoYear = studentRow.Field<int>(3);
-                rdobtnCourse.Text = studentRow.Field<string>(4);
-                txtHP.Text = studentRow.Field<string>(5);
-                txtEmail.Text = studentRow.Field<string>(6);
-                txtSelfDesc.Text = studentRow.Field<string>(7);
-                ddlSkillSet = studentRow.Field<string>(9);
-                imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
-                lblPoints = studentRow.Field<string>(11);
             }
         }
 
