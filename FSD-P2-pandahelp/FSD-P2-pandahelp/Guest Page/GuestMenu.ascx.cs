@@ -30,6 +30,7 @@ namespace FSD_P2_pandahelp
                     {
                         objStudent.GetDetails();
                         Session["student"] = objStudent;
+                        Student objStudents = (Student)Session["student"];
                         Response.Redirect("~/Listing_Pages/ViewListings.aspx");
                     }
                     else
@@ -46,6 +47,7 @@ namespace FSD_P2_pandahelp
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            
             if (ddlSearch.SelectedValue == "Student Name")
             {
                 Student student = new Student();
