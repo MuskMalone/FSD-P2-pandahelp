@@ -70,7 +70,7 @@ namespace FSD_P2_pandahelp.Listing_Pages
             SqlCommand cmd = new SqlCommand("insert into listing (title,description,ModuleNo,PaymentID,UserProfileID) " +
                                             "values (@title,@desc,@module,@payment,@userID)", conn);
             cmd.Parameters.AddWithValue("@title", txtTitle.Text);
-            cmd.Parameters.AddWithValue("@desc", txtTitle.Text);
+            cmd.Parameters.AddWithValue("@desc", txtDesc.Text);
             cmd.Parameters.AddWithValue("@module", Convert.ToInt32(ddlModule.SelectedValue));
             cmd.Parameters.AddWithValue("@payment", Convert.ToInt32(ddlPayment.SelectedValue));
             cmd.Parameters.AddWithValue("@userID", objStudent.userprofileID);

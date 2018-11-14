@@ -77,6 +77,7 @@
                 <img src="/Images/user.png" alt="Profile Logo" style="height:50px; width: 50px" />
             </button>
             <div class="dropdown-content">
+                <a href="CreateListing.aspx">Create Listing</a>
                 <a href="ProfilePage.aspx">Edit Profile</a>
                 <a href="ChangePassword.aspx">Change Password</a>
                 <a href="Login.aspx">Log out</a>
