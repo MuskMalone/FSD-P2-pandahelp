@@ -18,35 +18,26 @@ namespace FSD_P2_pandahelp
 		{
             txtSelfDesc.Height = 50;
             txtSelfDesc.Width = 300;
+
             Student objStudent = (Student)Session["student"];
             //NEED UPDATE
-            /*if (!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
-                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
-                SqlConnection conn = new SqlConnection(strConn);
-                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE EmailAddr=@email", conn);
-                cmd.Parameters.AddWithValue("@email", Session["username"]);
-
-                SqlDataAdapter daStudent = new SqlDataAdapter(cmd);
-                DataSet result = new DataSet();
-                conn.Open();
-                daStudent.Fill(result, "StudentDetails");
-                conn.Close();
-
-                DataRow studentRow = result.Tables["StudentDetails"].Rows[0];
-                lblName = studentRow.Field<string>(2);
-                rdoYear = studentRow.Field<int>(3);
-                rdobtnCourse.Text = studentRow.Field<string>(4);
-                txtHP.Text = studentRow.Field<string>(5);
-                txtEmail.Text = studentRow.Field<string>(6);
-                txtSelfDesc.Text = studentRow.Field<string>(7);
-                ddlSkillSet = studentRow.Field<string>(9);
-                imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
-                lblPoints = studentRow.Field<string>(11);
-            }*/
+                objStudent.GetDetails();
+                lblName.Text = objStudent.Name;
+                //rdoYear. = objStudent.year;
+                //rdobtnCourse.Text = objStudent.course;
+                txtHP.Text = objStudent.PhoneNo;
+                txtEmail.Text = objStudent.CEmail;
+                txtSelfDesc.Text = objStudent.description;
+                //ddlSkillSet.Text = objStudent.;
+                imgStud.ImageUrl = "~/Images/" + objStudent.photo;
+                //lblPoints. = objStudent.point;
+                
+            }
         }
 
-        private void displaySkillSet()
+        /*private void displaySkillSet()
         {
             if (!Page.IsPostBack)
             {
@@ -69,7 +60,7 @@ namespace FSD_P2_pandahelp
 
                 ddlSkillSet.DataBind();
             }
-        }
+        }*/
 
         private void posterPhoto()
         {
@@ -120,6 +111,16 @@ namespace FSD_P2_pandahelp
         protected void btnChangePass_Click(object sender, EventArgs e)
         {
             Response.Redirect("ChangePassword.aspx");
+        }
+
+        protected void rdoYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void rdobtnCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
