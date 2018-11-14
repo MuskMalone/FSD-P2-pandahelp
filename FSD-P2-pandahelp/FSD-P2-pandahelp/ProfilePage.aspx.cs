@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
@@ -17,31 +18,20 @@ namespace FSD_P2_pandahelp
 		{
             txtSelfDesc.Height = 50;
             txtSelfDesc.Width = 300;
-
+            Student objStudent = (Student)Session["student"];
             //NEED UPDATE
             if (!Page.IsPostBack)
             {
-                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
-                SqlConnection conn = new SqlConnection(strConn);
-                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE EmailAddr=@email", conn);
-                cmd.Parameters.AddWithValue("@email", Session["username"]);
-
-                SqlDataAdapter daStudent = new SqlDataAdapter(cmd);
-                DataSet result = new DataSet();
-                conn.Open();
-                daStudent.Fill(result, "StudentDetails");
-                conn.Close();
-
-                DataRow studentRow = result.Tables["StudentDetails"].Rows[0];
-                lblName = studentRow.Field<string>(2);
-                rdoYear = studentRow.Field<int>(3);
+                objStudent.GetDetails();
+                lblName.Text = objStudent.Name;
+                /*rdoYear = studentRow.Field<int>(3);
                 rdobtnCourse.Text = studentRow.Field<string>(4);
                 txtHP.Text = studentRow.Field<string>(5);
                 txtEmail.Text = studentRow.Field<string>(6);
                 txtSelfDesc.Text = studentRow.Field<string>(7);
                 ddlSkillSet = studentRow.Field<string>(9);
                 imgStud.ImageUrl = "~/Images/" + studentRow.Field<string>(10);
-                lblPoints = studentRow.Field<string>(11);
+                lblPoints = studentRow.Field<string>(11);*/
             }
         }
 
