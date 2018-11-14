@@ -46,6 +46,7 @@ namespace FSD_P2_pandahelp
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            
             if (ddlSearch.SelectedValue == "Student Name")
             {
                 Student student = new Student();

@@ -13,12 +13,12 @@ namespace FSD_P2_pandahelp {
     public partial class HomeMenu {
         
         /// <summary>
-        /// btnLogOut control.
+        /// inputSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogOut;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inputSearch;
     }
 }

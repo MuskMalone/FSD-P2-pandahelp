@@ -87,7 +87,7 @@
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\Icon\Send.icon.png" />
-    <Content Include="Images\pandahelp.jpg" />
+    <Content Include="Images\pandahelp.png" />
     <Content Include="Images\search.png" />
     <Content Include="Images\user.png" />
     <Content Include="Listing_Pages\CreateListing.aspx" />
