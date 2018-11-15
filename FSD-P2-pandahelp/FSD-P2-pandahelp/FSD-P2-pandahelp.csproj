@@ -89,6 +89,8 @@
     <Content Include="HomeMenu.ascx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\Icon\Send.icon.png" />
+    <Content Include="Images\male2.jpg" />
+    <Content Include="Images\male3.jpg" />
     <Content Include="Images\pandahelp.png" />
     <Content Include="Images\search.png" />
     <Content Include="Images\user.png" />
@@ -111,7 +113,6 @@
       <DependentUpon>AcceptRejectOffer.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Chats.cs" />
-    <Content Include="App_Code\ProfilePage.cs" />
     <Compile Include="App_Code\Student.cs" />
     <Compile Include="App_Code\Listing.cs" />
     <Compile Include="App_Code\Review.cs" />

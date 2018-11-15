@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using FSD_P2_pandahelp.App_Code;
 
 namespace FSD_P2_pandahelp
 {
@@ -24,9 +25,10 @@ namespace FSD_P2_pandahelp
             if (!changePassForm.CurrentPassword.Equals(changePassForm.NewPassword, StringComparison.CurrentCultureIgnoreCase))
             {
                 int rowsAffected = 0;
-                string query = "UPDATE UserProfile SET UserPassword = @NewPassword WHERE UserProfile = @id AND UserPassword = @CurrentPassword WHERE UserID = userID";
-                string passChange = ConfigurationManager.ConnectionStrings["PandaHelp"].ConnectionString;
-                using (SqlConnection conn = new SqlConnection(passChange))
+                string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+                string query = "UPDATE UserProfile SET UserPassword = @NewPassword WHERE UserProfile = @username AND UserPassword = @CurrentPassword WHERE UserID = userID";
+
+                using (SqlConnection conn = new SqlConnection(strConn))
                 {
                     using (SqlCommand cmd = new SqlCommand(query))
                     {
