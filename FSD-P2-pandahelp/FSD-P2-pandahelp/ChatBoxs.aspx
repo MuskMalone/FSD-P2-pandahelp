@@ -13,12 +13,32 @@
                          <h2> </h2>
                      </div>
                    <div class="card m-b-0" id="messages-main" style="box-shadow:0 0 40px 1px #c9cccd;">
-                      <div class="ms-menu" style="overflow:scroll; overflow-x: hidden;" id="ms-scrollbar"> 
+                      <div class="ms-menu" style="overflow:scroll; overflow-x: hidden;" id="ms-scrollbar">
+                           <div class="ms-block">
+                                   <div class="ms-user">
+                                        <%--<img src="./images/avatar.jpg" alt=""> --%>
+                                       <asp:Image ID="Image1" runat="server" />
+                                  <h5 class="q-title" align="center">
+                                      <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> <br/><b>5</b> New Messages</h5>
+                                   </div>
+                              </div>
+                          <div class="ms-block">
+                                   <a class="btn btn-primary btn-block ms-new" href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp; New Message</a> 
+                              </div><hr/> 
                           <div class="listview lv-user m-t-20">
                               <asp:DataList ID="Inbox" runat="server" OnItemDataBound="DataList1_ItemDataBound">
                                      <ItemTemplate>
-                                          <asp:Label ID="title" runat="server" Text='<%# Bind("title") %>'></asp:Label>
-                                         <asp:Label ID="Name" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                                          <div class="lv-item media"> 
+                                              <div class="lv-avatar pull-left"> 
+                                                   <%--<img src="./images/bhai.jpg" alt=""> --%>
+                                                  <asp:Image ID="Image2" runat="server" ImageUrl='<%# Formatimg(Eval("ProfilePic")) %>' />
+                                              </div>
+                                                <div class="media-body"> 
+                                                  <div class="lv-title">
+                                         <asp:Label ID="Name" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                                          <asp:Label ID="title" runat="server" Text='<%# Eval("title") %>'></asp:Label>
+                                          </div>
+                                        </div>
                                              
                                       </ItemTemplate>
                               </asp:DataList>                                                                    
@@ -40,7 +60,7 @@
                            </div>
                            <%--<ul class="lv-actions actions list-unstyled list-inline"> <li> <a href="#" > <i class="fa fa-check"></i> </a> </li><li> <a href="#" > <i class="fa fa-clock-o"></i> </a> </li><li> <a data-toggle="dropdown" href="#" > <i class="fa fa-list"></i></a> <ul class="dropdown-menu user-detail" role="menu"> <li> <a href="">Latest</a> </li><li> <a href="">Oldest</a> </li></ul> </li><li> <a data-toggle="dropdown" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left"><span class="glyphicon glyphicon-trash"></span></a> <ul class="dropdown-menu user-detail" role="menu"> <li> <a href="">Delete Messages</a> </li></ul> </li></ul>--%>
                         </div>
-                        <div class="lv-body" id="dvScroll" style="overflow: scroll; overflow-x: hidden; height: 520px;">
+                        <div class="lv-body" id="ms-scrollbar" style="overflow: scroll; overflow-x: hidden; height: 520px;">
                             <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000"></asp:Timer>
                             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                             <Triggers><asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" /></Triggers>

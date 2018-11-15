@@ -16,7 +16,7 @@ namespace FSD_P2_pandahelp
     {
         Chats c = new Chats();
         Student objStudent;
-
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -66,6 +66,11 @@ namespace FSD_P2_pandahelp
         {
            return DateTime.Parse(value.ToString()).ToString("HH:mm");
         }
+       public string Formatimg(object value)
+        {
+            return ("~/Images/" + value.ToString());
+        }
+
 
 
         public void Load_Frends()
@@ -82,15 +87,21 @@ namespace FSD_P2_pandahelp
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             DataSet ds = new DataSet();
 
-            
+
 
             conn.Open();
             da.Fill(ds,"Chattitle");
             da2.Fill(ds, "Recipent");
             conn.Close();
+            DataTable dtblFinal = new DataTable();
+
+            foreach (DataTable table in ds.Tables)
+            {
+                dtblFinal.Merge(table, false, MissingSchemaAction.Add);
+            }
             //DataList2.DataSource = ds;
             //DataList2.DataBind();
-            Inbox.DataSource = ds;
+            Inbox.DataSource = dtblFinal;
             Inbox.DataBind();
         }
         protected void btnSend_Click1(object sender, EventArgs e)
