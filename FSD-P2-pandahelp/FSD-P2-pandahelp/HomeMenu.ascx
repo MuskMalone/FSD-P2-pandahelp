@@ -54,48 +54,22 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-              <table class="auto-style1">
-        <tr>
-            <td class="auto-style3">Title</td>
-            <td>
-                <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Description</td>
-            <td>
-                <asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Module</td>
-            <td>
+            <div>
+                Title &nbsp; <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+            </div>
+            <div>
+                Description &nbsp; <asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </div>
+            <div>
+                Module &nbsp;
                 <asp:DropDownList ID="ddlModule" runat="server">
                 </asp:DropDownList>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Payment</td>
-            <td>
+            </div>
+            <div>
+                Payment &nbsp;                 
                 <asp:DropDownList ID="ddlPayment" runat="server">
                 </asp:DropDownList>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td>
-                
-            </td>
-        </tr>
-    </table>
+            </div>
         </div>
         
         <!-- Modal footer -->
