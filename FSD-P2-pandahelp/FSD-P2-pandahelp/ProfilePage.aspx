@@ -50,8 +50,7 @@
             <td class="auto-style6">
                 Year:</td>
             <td class="auto-style4">
-                <asp:RadioButtonList ID="rdoYear" runat="server" OnSelectedIndexChanged="rdoYear_SelectedIndexChanged" RepeatDirection="Horizontal">
-                </asp:RadioButtonList>
+                <asp:Label ID="lblYear" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -64,8 +63,7 @@
             <td class="auto-style6">
                 Course:</td>
             <td class="auto-style4">
-                <asp:RadioButtonList ID="rdobtnCourse" runat="server" RepeatDirection="Horizontal" OnSelectedIndexChanged="rdobtnCourse_SelectedIndexChanged">
-                </asp:RadioButtonList>
+                <asp:Label ID="lblCourse" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

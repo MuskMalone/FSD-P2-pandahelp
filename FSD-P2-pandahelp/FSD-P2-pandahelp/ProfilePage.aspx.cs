@@ -25,14 +25,14 @@ namespace FSD_P2_pandahelp
             {
                 objStudent.GetDetails();
                 lblName.Text = objStudent.Name;
-                //rdoYear. = objStudent.year;
-                //rdobtnCourse.Text = objStudent.course;
+                lblYear.Text = (objStudent.year).ToString();
+                lblCourse.Text = objStudent.course;
                 txtHP.Text = objStudent.PhoneNo;
                 txtEmail.Text = objStudent.CEmail;
                 txtSelfDesc.Text = objStudent.description;
                 //ddlSkillSet.Text = objStudent.;
                 imgStud.ImageUrl = "~/Images/" + objStudent.photo;
-                //lblPoints. = objStudent.point;
+                lblPoints.Text = (objStudent.point).ToString();
                 
             }
         }
@@ -62,7 +62,7 @@ namespace FSD_P2_pandahelp
             }
         }*/
 
-        private void posterPhoto()
+        private void imgPhoto()
         {
             string uploadedFile = "";
 
@@ -95,7 +95,13 @@ namespace FSD_P2_pandahelp
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            /*int errorCode1 =;
+            Student objUpdate = new Student();
+
+            objUpdate.description = txtSelfDesc.Text;
+            objUpdate.PhoneNo = txtHP.Text;
+            objUpdate.CEmail = txtEmail.Text;
+
+            int errorCode1 = objUpdate.updateProfile();
 
             if (errorCode1 == 0)
             {
@@ -105,7 +111,7 @@ namespace FSD_P2_pandahelp
             {
                 lblMessage.Text = "Unable to update profile!";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
-            }*/
+            }
         }
 
         protected void btnChangePass_Click(object sender, EventArgs e)

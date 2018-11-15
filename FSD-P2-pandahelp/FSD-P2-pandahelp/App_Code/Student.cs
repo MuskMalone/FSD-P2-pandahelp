@@ -108,5 +108,29 @@ namespace FSD_P2_pandahelp.App_Code
             }
            
         }
+
+        public int updateProfile()
+        {
+            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand
+                ("UPDATE UserProfile SET ContactHP=@PhoneNo, ContactEmail=@CEmail, SDescription=@description WHERE UserID = userID", conn);
+
+            cmd.Parameters.AddWithValue("@PhoneNo", PhoneNo);
+            cmd.Parameters.AddWithValue("@CEmail", CEmail);
+            cmd.Parameters.AddWithValue("@description", description);
+            //cmd.Parameters.AddWithValue("@skillSet", skillSet);Skillset=@skillSet
+
+            conn.Open();
+
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            if (count > 0)
+                return 0;
+            else
+                return -2;
+        }
     }
 }

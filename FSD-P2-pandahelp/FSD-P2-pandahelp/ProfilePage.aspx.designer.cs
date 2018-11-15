@@ -58,22 +58,22 @@ namespace FSD_P2_pandahelp {
         protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// rdoYear control.
+        /// lblYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdoYear;
+        protected global::System.Web.UI.WebControls.Label lblYear;
         
         /// <summary>
-        /// rdobtnCourse control.
+        /// lblCourse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdobtnCourse;
+        protected global::System.Web.UI.WebControls.Label lblCourse;
         
         /// <summary>
         /// txtHP control.
