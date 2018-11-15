@@ -73,12 +73,20 @@ namespace FSD_P2_pandahelp
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
-                           (" select title from PrivateChat p inner join Listing l on p.ListingID = l.ListingID inner join ChatPerson c on p.ChatID = c.ChatID where c.ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id; select Name,ProfilePic,ChatID from UserProfile u inner join ChatPerson c on u.UserProfileID = c.UserProfileID where ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id;", conn);
+                           (" select title from PrivateChat p inner join Listing l on p.ListingID = l.ListingID inner join ChatPerson c on p.ChatID = c.ChatID where c.ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id;", conn);
+            SqlCommand cmd2 = new SqlCommand
+                          (" select Name,ProfilePic,ChatID from UserProfile u inner join ChatPerson c on u.UserProfileID = c.UserProfileID where ChatID in (select ChatID from Chatperson where UserProfileID =@id) and c.UserProfileId !=@id;", conn);
             cmd.Parameters.AddWithValue("@id", c.TutorID);
+            cmd2.Parameters.AddWithValue("@id", c.TutorID);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             DataSet ds = new DataSet();
+
+            
+
             conn.Open();
-            da.Fill(ds);
+            da.Fill(ds,"Chattitle");
+            da2.Fill(ds, "Recipent");
             conn.Close();
             //DataList2.DataSource = ds;
             //DataList2.DataBind();
