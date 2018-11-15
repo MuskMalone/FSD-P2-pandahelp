@@ -23,6 +23,11 @@ namespace FSD_P2_pandahelp
             //NEED UPDATE
             if (!Page.IsPostBack)
             {
+                /*string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
+                SqlConnection conn = new SqlConnection(strConn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM UserProfile WHERE UserID=@userID", conn);
+                cmd.Parameters.AddWithValue("@userID", Session["user"]);*/
+                
                 objStudent.GetDetails();
                 lblName.Text = objStudent.Name;
                 lblYear.Text = (objStudent.year).ToString();
@@ -100,6 +105,7 @@ namespace FSD_P2_pandahelp
             objUpdate.description = txtSelfDesc.Text;
             objUpdate.PhoneNo = txtHP.Text;
             objUpdate.CEmail = txtEmail.Text;
+            objUpdate.photo = imgStud.ImageUrl;
 
             int errorCode1 = objUpdate.updateProfile();
 

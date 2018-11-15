@@ -19,7 +19,7 @@
             height: 29px;
         }
         .auto-style9 {
-            width: 100px;
+            width: 15px;
         }
         </style>
 </asp:Content>
