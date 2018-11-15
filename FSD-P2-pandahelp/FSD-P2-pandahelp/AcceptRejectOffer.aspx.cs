@@ -16,7 +16,7 @@ namespace FSD_P2_pandahelp
             string strConn = ConfigurationManager.ConnectionStrings
                 ["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
-            SqlCommand cmd = new SqlCommand("select ListingID,UserProfile.ProfilePic,title,description,ModuleNo,PaymentID,UserProfile.UserProfileID,DateCreated,ResolvedStatus,userprofile.UserProfileID,name,status from listing inner join userprofile on listing.UserProfileID = UserProfile.UserProfileID inner join offer on offer.Offerid = listing.ListingID", conn);
+            SqlCommand cmd = new SqlCommand("select ListingID,UserProfile.ProfilePic,title,description,Module.ModuleNo,Payment.PaymentID,UserProfile.UserProfileID,DateCreated,ResolvedStatus,userprofile.UserProfileID,name,status from listing inner join userprofile on listing.UserProfileID = UserProfile.UserProfileID inner join offer on offer.Offerid = listing.ListingID", conn);
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);
             DataSet result = new DataSet();
             conn.Open();
@@ -34,8 +34,7 @@ namespace FSD_P2_pandahelp
 
         protected void btnReject_Click(object sender, EventArgs e)
         {
-            string strConn = ConfigurationManager.ConnectionStrings
-    ["PandaHelp"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand("select ListingID,UserProfile.ProfilePic,title,description,ModuleNo,PaymentID,UserProfile.UserProfileID,DateCreated,ResolvedStatus,userprofile.UserProfileID,name,status from listing inner join userprofile on listing.UserProfileID = UserProfile.UserProfileID inner join offer on offer.Offerid = listing.ListingID", conn);
             SqlDataAdapter daListing = new SqlDataAdapter(cmd);

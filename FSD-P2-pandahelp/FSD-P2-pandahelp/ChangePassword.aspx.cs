@@ -19,12 +19,12 @@ namespace FSD_P2_pandahelp
         }
 
         //Need Update
-        protected void OnChangingPassword(object sender, LoginCancelEventArgs e)
+        protected void changePassForm_ChangedPassword(object sender, LoginCancelEventArgs e)
         {
             if (!changePassForm.CurrentPassword.Equals(changePassForm.NewPassword, StringComparison.CurrentCultureIgnoreCase))
             {
                 int rowsAffected = 0;
-                string query = "UPDATE [Users] SET UserPassword = @NewPassword WHERE [Username] = @Username AND UserPassword = @CurrentPassword";
+                string query = "UPDATE UserProfile SET UserPassword = @NewPassword WHERE UserProfile = @id AND UserPassword = @CurrentPassword WHERE UserID = userID";
                 string passChange = ConfigurationManager.ConnectionStrings["PandaHelp"].ConnectionString;
                 using (SqlConnection conn = new SqlConnection(passChange))
                 {
