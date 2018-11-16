@@ -112,7 +112,7 @@
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
-                <a class="nav-link" href="~/Listing_Pages/ViewListings.aspx">Listings</a>
+                <a class="nav-link" href="../Listing_Pages/ViewListings.aspx">Listings</a>
             </li>
             <span class="divider">|</span>
             <li class="nav-item">
