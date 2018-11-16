@@ -25,7 +25,7 @@ namespace FSD_P2_pandahelp
             Load_Frends();*/
             InitialiseChat();
             LoadChatbox();
-            /*Load_Frends();*/
+            Load_Frends();
 
 
         }
@@ -73,7 +73,7 @@ namespace FSD_P2_pandahelp
 
 
 
-        /*public void Load_Frends()
+        public void Load_Frends()
         {
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
@@ -103,7 +103,7 @@ namespace FSD_P2_pandahelp
             //DataList2.DataBind();
             Inbox.DataSource = dtblFinal;
             Inbox.DataBind();
-        }*/
+        }
         protected void btnSend_Click1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtMessage.Text))
