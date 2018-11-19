@@ -17,14 +17,11 @@
                                      <ItemTemplate>
                                           <div class="lv-item media"> 
                                               <div class="lv-avatar pull-left"> 
-                                                   <%--<img src="./images/bhai.jpg" alt=""> --%>
                                                   <asp:Image ID="Image2" runat="server" ImageUrl='<%# Formatimg(Eval("ProfilePic")) %>' />
                                               </div>
-                                                <div class="media-body"> 
-                                                  <div class="lv-title">
-                                         <asp:Label ID="Name" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
-                                          <asp:Label ID="title" runat="server" Text='<%# Eval("title") %>'></asp:Label>
-                                          </div>
+                                                <div class="media-body">                                                  
+                                         <asp:Label ID="Name" runat="server" Text='<%#  Eval("Name")%>'></asp:Label>   
+                                                    
                                         </div>
                                         </div>     
                                       </ItemTemplate>
