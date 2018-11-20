@@ -78,17 +78,14 @@ namespace FSD_P2_pandahelp
             string strConn = ConfigurationManager.ConnectionStrings["PandaHelp"].ToString();
             SqlConnection conn = new SqlConnection(strConn);
             SqlCommand cmd = new SqlCommand
-                           (" select Name,ProfilePic from UserProfile u inner join Chat c on u.UserProfileID = c.UserProfileID2 where c.UserProfileID1 !=@id;", conn);
+                           (" select Name,ProfilePic,u.UserProfileID from UserProfile u inner join Chat c on u.UserProfileID = c.UserProfileID2 where c.UserProfileID1 !=@id;", conn);
             SqlCommand cmd2 = new SqlCommand
-                          (" select Name,ProfilePic from UserProfile u inner join Chat c on u.UserProfileID = c.UserProfileID1 where c.UserProfileID2 !=@id;", conn);
+                          (" select Name,ProfilePic,u.UserProfileID from UserProfile u inner join Chat c on u.UserProfileID = c.UserProfileID1 where c.UserProfileID2 !=@id;", conn);
             cmd.Parameters.AddWithValue("@id", c.TutorID);
             cmd2.Parameters.AddWithValue("@id", c.TutorID);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             DataSet ds = new DataSet();
-
-
-
             conn.Open();
             da.Fill(ds,"Chattitle");
             da2.Fill(ds, "Recipent");
@@ -132,7 +129,10 @@ namespace FSD_P2_pandahelp
 
         protected void DataList1_ItemDataBound(object sender, DataListItemEventArgs e)
         {
-
+            c = new Chats();
+            c.TutorID = objStudent.userprofileID;
+            c.TuteeID = Convert.ToInt32(e.Item.DataItem("UserProfileID"));
+            LoadChatbox();
         }
 
         
